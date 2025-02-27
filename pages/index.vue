@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
-console.log(config.public.apiSecret);
+// console.log(config);
 
-const data = await $fetch(`https://newsapi.org/v2/everything?q=apple&pageSize=20&apiKey=9b464cabd32c4833b9e44830a50c4a7c`);
+const data = await $fetch(`https://newsapi.org/v2/everything?q=apple&pageSize=20&apiKey=${config.public.apiSecret}`);
 
 const articles = data.articles;
 console.log(articles);
