@@ -1,14 +1,26 @@
+<script setup>
+const hamburger = ref(true)
+
+const toggleHamburger = () => {
+    hamburger.value = !hamburger.value
+}
+</script>
+
 <template>
     <div class="flex justify-between">
         <!-- hamburger meni -->
         <div>
-            <IconsHamburger />
+            <IconsHamburger v-if="!hamburger" @click="toggleHamburger"/>
+            <IconsX v-else @click="toggleHamburger"/>
         </div>
         <div class="flex-grow" />
         <!-- search -->
         <div>
             <IconsSearch />
         </div>
+    </div>
+    <div>
+        <HeaderHamburger v-if="hamburger"/>
     </div>
 </template>
 
