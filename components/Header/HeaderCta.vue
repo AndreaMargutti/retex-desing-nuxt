@@ -1,5 +1,5 @@
 <template>
-    <div class="flex text-center mt-1 align-items-center padding-page">
+    <div class="flex text-center align-items-center padding-page">
         <div class="flex-basis-50 border border--right--0 py-1">
             Contribuisci
         </div>

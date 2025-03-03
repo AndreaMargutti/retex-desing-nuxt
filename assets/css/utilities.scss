@@ -24,10 +24,13 @@
     flex-grow: 1;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
+
 .justify-end {
     justify-content: end;
 }
-
 
 .align-items-center {
     align-items: center;
