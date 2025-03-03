@@ -1,23 +1,15 @@
 <script setup>
-const config = useRuntimeConfig();
-
-const { data } = await useAsyncData( () => {
-  return $fetch(`https://newsapi.org/v2/everything?q=politics&apiKey=${config.apiSecret}`);
-})
-
-const articles = data.value.articles;
-// console.log(articles)
+import AppHeader from '~/components/Header/AppHeader.vue';
+// const config = useRuntimeConfig();
+// const { data } = await useAsyncData( () => {
+//   return $fetch(`https://newsapi.org/v2/everything?q=politics&apiKey=${config.apiSecret}`);
+// })
+// const articles = data.value.articles;
 
 </script>
 
 <template>
-  <div>
-    <ul>
-      <li v-for="article in articles" :key="article.title">
-        {{ article.title }}
-      </li>
-    </ul>
-  </div>
+    <AppHeader/>
 </template>
 
 <style scoped></style>
