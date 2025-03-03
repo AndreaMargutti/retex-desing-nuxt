@@ -1,5 +1,5 @@
 <script setup>
-const hamburger = ref(true)
+const hamburger = ref(false)
 
 const toggleHamburger = () => {
     hamburger.value = !hamburger.value
