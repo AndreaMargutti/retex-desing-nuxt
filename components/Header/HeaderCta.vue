@@ -1,3 +1,8 @@
+<script setup lang="ts">
+
+
+</script>
+
 <template>
     <div class="flex text-center align-items-center padding-page">
         <div class="flex-basis-50 border border--right--0 py-1">
@@ -8,7 +13,7 @@
         </div>
         <div class="d-none flex-grow">
             <div class="flex justify-end align-items-center">
-                <img src="../../public/access_icon.png" alt="acces_icon" style="width: 16px; height: 16px;">
+                <IconsLogIn />
                 <p class="ps-1">
                     Accedi
                 </p>
@@ -23,6 +28,7 @@
     @media screen and (max-width: 768px) {
         .padding-page {
             padding: 0;
+            padding-top: 44px;
         }
     }
 
