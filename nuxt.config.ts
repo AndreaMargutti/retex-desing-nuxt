@@ -17,5 +17,5 @@ export default defineNuxtConfig({
   },
 
 
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@nuxt/fonts'],
 },)
