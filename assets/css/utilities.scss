@@ -1,0 +1,63 @@
+/* margin */
+
+.mt-1 {
+    margin-top: 30px;
+}
+
+/* display */
+
+.d-none {
+    display: none;
+}
+
+/* flex */
+
+.flex {
+    display: flex;
+}
+
+.flex-basis-50 {
+    flex-basis: 50%;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+
+.align-items-center {
+    align-items: center;
+}
+// text
+
+.text-center {
+    text-align: center;
+}
+
+/* padding */
+
+.py-1 {
+    padding: 5px;
+}
+
+.ps-1 {
+    padding-left: 5px;
+}
+
+.padding-page {
+    padding: 16px 40px;
+}
+
+/* bordi */
+
+.border {
+    border: 0.5px solid black
+}
+
+.border--right--0 {
+    border-right: 0;
+}

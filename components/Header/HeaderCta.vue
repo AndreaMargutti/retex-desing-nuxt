@@ -1,56 +1,53 @@
 <template>
-    <div class="flex text-center mt-1">
+    <div class="flex text-center mt-1 align-items-center padding-page">
         <div class="flex-basis-50 border border--right--0 py-1">
             Contribuisci
         </div>
         <div class="flex-basis-50 border py-1">
             Abbonati
         </div>
+        <div class="d-none flex-grow">
+            <div class="flex justify-end align-items-center">
+                <img src="../../public/access_icon.png" alt="acces_icon" style="width: 16px; height: 16px;">
+                <p class="ps-1">
+                    Accedi
+                </p>
+            </div>
+        </div>
     </div>
 </template>
 
 <style scoped>
 
-    /* margin */
-
-    .mt-1 {
-        margin-top: 30px;
+    /* mobile */
+    @media screen and (max-width: 768px) {
+        .padding-page {
+            padding: 0;
+        }
     }
 
-    /* flex */
 
-    .flex {
-        display: flex;
+    /* first breakpoint */
+    @media screen and (min-width: 768px) {
+        /* remove border */
+        .border {
+            border: 0;
+        }
+
+        /* toggle visibility */
+
+        .d-none {
+            display: inline;
+        }
+
+        /* adjust layout */
+
+        .text-center {
+            text-align: start;
+        }
+
+       .flex-basis-50 {
+        flex-basis: auto
+       }
     }
-
-    .flex-basis-50 {
-        flex-basis: 50%;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    /* padding */
-
-    .py-1 {
-        padding: 5px;
-    }
-
-    /* bordi */
-
-    .border {
-        border: 0.5px solid black
-    }
-
-    .border--right--0 {
-        border-right: 0;
-    }
-
-    /* white-bar */
-
-    #white-bar {
-        height: 20px;
-    }
-
 </style>
