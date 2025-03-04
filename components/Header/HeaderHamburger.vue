@@ -11,29 +11,29 @@ const info = ref([
 
 <template>
     <div class="flex flex-wrap">
-        <div class="border">
+        <div class="menu-article border">
             <h1>Articoli</h1>
-            <p>Trend, dati e novità del Terzo Settore.</p>
+            <p class="menu-article__text">Trend, dati e novità del Terzo Settore.</p>
         </div>
-        <div class="border">
+        <div class="menu-article border">
             <h1>Storie</h1>
-            <p>Letture ed approfondimenti dei fenomeni complessi.</p>
+            <p class="menu-article__text">Letture ed approfondimenti dei fenomeni complessi.</p>
         </div>
-        <div class="border">
+        <div class="menu-article border">
             <h1>Interviste</h1>
-            <p>Racconti reali di persone ed organizzazioni.</p>
+            <p class="menu-article__text">Racconti reali di persone ed organizzazioni.</p>
         </div>
-        <div class="border">
+        <div class="menu-article border">
             <h1>Opinioni</h1>
-            <p>Riflessioni e confronti dei nostri opinionisti.</p>
+            <p class="menu-article__text">Riflessioni e confronti dei nostri opinionisti.</p>
         </div>
-        <div class="border">
+        <div class="menu-article border">
             <h1>Podcast</h1>
-            <p>Un luogo per dare voce ai protagonisti della sostenibilità.</p>
+            <p class="menu-article__text">Un luogo per dare voce ai protagonisti della sostenibilità.</p>
         </div>
-        <div class="border">
+        <div class="menu-article border">
             <h1>Bookazine</h1>
-            <p>Una rivista da leggere e un libro da conservare.</p>
+            <p class="menu-article__text">Una rivista da leggere e un libro da conservare.</p>
         </div>
     </div>
     <div>
@@ -48,15 +48,13 @@ const info = ref([
         font-size: 48px;
     }
 
-    .flex {
-        div {
-            flex-basis: calc(100% / 3);
-            padding: 40px;
-            padding-top: 144px;
-        }
+    .menu-article {
+        flex-basis: calc(100% / 3);
+        padding: 40px;
+        padding-top: 144px;
+    }
 
-        p {
-            font-size: 14px;
-        }
+    .menu-article__text {
+        font-size: 14px;
     }
 </style>
