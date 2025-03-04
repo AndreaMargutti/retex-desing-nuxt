@@ -9,13 +9,13 @@ const toggleHamburger = () => {
 <template>
     <div class="flex justify-between">
         <!-- hamburger meni -->
-        <div>
+        <div class="searchbar-section">
             <IconsHamburger v-if="!hamburger" @click="toggleHamburger"/>
             <IconsX v-else @click="toggleHamburger"/>
         </div>
-        <div class="flex-grow" />
+        <div class="flex-grow searchbar-section" />
         <!-- search -->
-        <div>
+        <div class="searchbar-section">
             <IconsSearch />
         </div>
     </div>
@@ -25,26 +25,18 @@ const toggleHamburger = () => {
 </template>
 
 <style scoped lang="scss">
-.flex {
-    div {
-        border: 0.5px solid black;
-        border-top: 0;
-        border-right: 0;
-        padding: 16px;
-    }
 
-    // ? Necessaria
-    div:first-child {
-        border-left: 0;
-    }
+.searchbar-section {
+    border: 0.5px solid black;
+    border-top: 0;
+    border-right: 0;
+    padding: 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .flex {
-        div {
-            padding: 40px;
-            border-top: 0.5px solid;
-        }
+    .searchbar-section {
+        padding: 40px;
+        border-top: 0.5px solid;
     }
 }
 </style>
