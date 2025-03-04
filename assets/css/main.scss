@@ -1,5 +1,5 @@
 /* tailwind css */
-@import "reset.scss";
-@import "tailwindcss";
-@import "variables.scss";
-@import "utilities.scss";
+@use "reset.scss";
+@use "tailwindcss";
+@use "variables.scss";
+@use "utilities.scss";
