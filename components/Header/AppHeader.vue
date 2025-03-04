@@ -12,7 +12,7 @@ const topics = ref([
 
 let hamburgerStatus = ref();
 function changeStatus (status) {
-    hamburgerStatus.value = status;
+   hamburgerStatus.value = status;
     // console.log(hamburgerStatus);
 }
 
@@ -23,3 +23,7 @@ function changeStatus (status) {
     <HeaderSearchBar @hamburger-toggle="changeStatus"/>
     <HeaderFilter :topics="topics" :hamburgerStatus="hamburgerStatus"/>
 </template>
+
+<style scoped>
+
+</style>

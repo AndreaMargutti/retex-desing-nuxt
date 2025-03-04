@@ -18,4 +18,5 @@ console.log(articles);
     <AppHeader/>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

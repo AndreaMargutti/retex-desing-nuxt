@@ -10,34 +10,36 @@ const info = ref([
 </script>
 
 <template>
-    <div class="flex flex-wrap">
-        <div class="menu-article border">
-            <h1>Articoli</h1>
-            <p class="menu-article__text">Trend, dati e novità del Terzo Settore.</p>
+    <div id="hamburger-menu">
+        <div class="flex flex-wrap">
+            <div class="menu-article border menu-article__border-left-bottom">
+                <h1>Articoli</h1>
+                <p class="menu-article__text">Trend, dati e novità del Terzo Settore.</p>
+            </div>
+            <div class="menu-article border menu-article__border-left-bottom">
+                <h1>Storie</h1>
+                <p class="menu-article__text">Letture ed approfondimenti dei fenomeni complessi.</p>
+            </div>
+            <div class="menu-article border menu-article__border-bottom">
+                <h1>Interviste</h1>
+                <p class="menu-article__text">Racconti reali di persone ed organizzazioni.</p>
+            </div>
+            <div class="menu-article border menu-article__border-left-bottom">
+                <h1>Opinioni</h1>
+                <p class="menu-article__text">Riflessioni e confronti dei nostri opinionisti.</p>
+            </div>
+            <div class="menu-article border menu-article__border-left-bottom">
+                <h1>Podcast</h1>
+                <p class="menu-article__text">Un luogo per dare voce ai protagonisti della sostenibilità.</p>
+            </div>
+            <div class="menu-article border menu-article__border-bottom">
+                <h1>Bookazine</h1>
+                <p class="menu-article__text">Una rivista da leggere e un libro da conservare.</p>
+            </div>
         </div>
-        <div class="menu-article border">
-            <h1>Storie</h1>
-            <p class="menu-article__text">Letture ed approfondimenti dei fenomeni complessi.</p>
+        <div id="hamburger-ft">
+            <HeaderHamburgerFooter :info="info"/>
         </div>
-        <div class="menu-article border">
-            <h1>Interviste</h1>
-            <p class="menu-article__text">Racconti reali di persone ed organizzazioni.</p>
-        </div>
-        <div class="menu-article border">
-            <h1>Opinioni</h1>
-            <p class="menu-article__text">Riflessioni e confronti dei nostri opinionisti.</p>
-        </div>
-        <div class="menu-article border">
-            <h1>Podcast</h1>
-            <p class="menu-article__text">Un luogo per dare voce ai protagonisti della sostenibilità.</p>
-        </div>
-        <div class="menu-article border">
-            <h1>Bookazine</h1>
-            <p class="menu-article__text">Una rivista da leggere e un libro da conservare.</p>
-        </div>
-    </div>
-    <div>
-        <HeaderHamburgerFooter :info="info"/>
     </div>
 </template>
 
@@ -56,6 +58,14 @@ const info = ref([
 
     .menu-article__text {
         font-size: 14px;
+    }
+
+    .menu-article__border-left-bottom {
+        border-width: 0 1px 1px 0;
+    }
+
+    .menu-article__border-bottom {
+        border-width: 0 0 1px 0;
     }
 
     @media screen and (min-width: 970px) {

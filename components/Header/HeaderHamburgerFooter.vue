@@ -14,7 +14,11 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
- li {
+ul {
+    height: 100%;
+}
+
+li {
     padding: 65px 0;
     flex-basis: calc(100% / 6);
     align-content: stretch;
@@ -24,5 +28,5 @@ const props = defineProps({
         font-size: 14px;
         font-weight: 400;
     }
- }
+}
 </style>

@@ -29,7 +29,7 @@ const toggleHamburger = () => {
 <style scoped lang="scss">
 
 .searchbar-section {
-    border: 0.5px solid black;
+    border: 1px solid black;
     border-top: 0;
     border-right: 0;
     padding: 16px;
@@ -38,7 +38,7 @@ const toggleHamburger = () => {
 @media screen and (min-width: 768px) {
     .searchbar-section {
         padding: 40px;
-        border-top: 0.5px solid;
+        border-top: 1px solid;
     }
 }
 </style>

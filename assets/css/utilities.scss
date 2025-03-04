@@ -40,6 +40,10 @@
     align-items: center;
 }
 
+.gap-12 {
+    gap: 12px;
+}
+
 // text
 
 .text-center {
@@ -63,7 +67,12 @@
 /* bordi */
 
 .border {
-    border: 0.5px solid black
+    border-width: 1px;
+    border: solid black;
+}
+
+.border-bottom {
+    border-width: 0 0 1px 0;
 }
 
 .border--right--0 {
