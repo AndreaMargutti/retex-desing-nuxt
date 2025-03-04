@@ -49,12 +49,19 @@ const info = ref([
     }
 
     .menu-article {
-        flex-basis: calc(100% / 3);
+        flex-basis: calc(100%);
         padding: 40px;
-        padding-top: 144px;
+        padding-top: 50px;
     }
 
     .menu-article__text {
         font-size: 14px;
+    }
+
+    @media screen and (min-width: 970px) {
+        .menu-article {
+            flex-basis: calc(100% / 3);
+            padding-top: 144px;
+        }
     }
 </style>

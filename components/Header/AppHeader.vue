@@ -8,12 +8,18 @@ const topics = ref([
     { id: 6, title: 'Politica', color: '#F1F1E2' },
     { id: 7, title: 'Società', color: '#FFFFFF' },
     { id: 8, title: 'Welfare', color: '#FFFFFF' }
-])
+]);
+
+let hamburgerStatus = ref();
+function changeStatus (status) {
+    hamburgerStatus.value = status;
+    // console.log(hamburgerStatus);
+}
 
 </script>
 
 <template>
     <HeaderCta />
-    <HeaderSearchBar />
-    <HeaderFilter :topics="topics"/>
+    <HeaderSearchBar @hamburger-toggle="changeStatus"/>
+    <HeaderFilter :topics="topics" :hamburgerStatus="hamburgerStatus"/>
 </template>

@@ -1,8 +1,10 @@
 <script setup>
 const hamburger = ref(false)
+const emit = defineEmits(['hamburgerToggle'])
 
 const toggleHamburger = () => {
     hamburger.value = !hamburger.value
+    emit('hamburgerToggle', hamburger.value);
 }
 </script>
 

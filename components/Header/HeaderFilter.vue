@@ -1,12 +1,13 @@
 <script setup>
 const props = defineProps({
     topics: Array,
+    hamburgerStatus: Boolean
 })
 
 </script>
 
 <template>
-    <div class="d-none justify-between padding-page border align-items-center">
+    <div v-show="!hamburgerStatus" class="d-none justify-between padding-page border align-items-center">
         <ul class="flex align-items-center">
             <li v-for="{ id, title } in topics" :key="id">
                 <h1> {{ title }} </h1>
