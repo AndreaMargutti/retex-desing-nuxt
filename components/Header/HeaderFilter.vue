@@ -12,7 +12,7 @@ const toggleBtns = () => {
 </script>
 
 <template>
-    <div v-show="!hamburgerStatus" class="d-none justify-between padding-page border border-bottom align-items-center">
+    <div v-show="!hamburgerStatus" class="d-none flex-md justify-between padding-page border border-bottom align-items-center">
         <ul class="flex align-items-center">
             <li v-for="{ id, title } in topics" :key="id">
                 <h1> {{ title }} </h1>
@@ -41,10 +41,6 @@ const toggleBtns = () => {
 <style scoped lang="scss">
 // responsive
 @media screen and (min-width: 1100px) {
-    .d-none {
-        display: flex;
-    }
-
     .flex-md {
         display: flex;
     }
@@ -54,10 +50,6 @@ h1 {
     font-family: 'Raleway';
     font-size: 28px;
     font-weight: 700;
-}
-
-.padding-page {
-    padding: 24px 40px
 }
 
 li {
