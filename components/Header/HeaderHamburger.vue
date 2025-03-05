@@ -44,6 +44,11 @@ const info = ref([
 </template>
 
 <style scoped lang="scss">
+    #hamburger-menu {
+        background-color: white;
+        position: fixed;
+    }
+
     h1 {
         font-family: 'Raleway';
         font-weight: 700;
@@ -53,7 +58,7 @@ const info = ref([
     .menu-article {
         flex-basis: calc(100%);
         padding: 40px;
-        padding-top: 50px;
+        padding-top: 144px;
     }
 
     .menu-article__text {
