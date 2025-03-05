@@ -26,8 +26,7 @@ li {
     padding: 65px 0;
     flex-basis: calc(100% / 6);
     align-content: stretch;
-    border-right: 1px solid black;
-
+    border-bottom: 1px solid black;
     p {
         font-size: 14px;
         font-weight: 400;
@@ -37,6 +36,11 @@ li {
 @media screen and (min-width: 970px) {
     .flex-row {
         flex-direction: row;
+    }
+
+    li {
+        border-bottom: 0;
+        border-right: 1px solid black;
     }
 }
 </style>
