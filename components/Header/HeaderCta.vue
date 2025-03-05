@@ -2,14 +2,15 @@
 </script>
 
 <template>
-    <div class="flex text-center align-items-center padding-page">
+    <div class="white-band" />
+    <div class="flex text-center align-items-center padding-sm padding-page">
         <div class="flex-basis-50 border border--right--0 py-1">
             Contribuisci
         </div>
         <div class="flex-basis-50 border py-1">
             Abbonati
         </div>
-        <div class="d-none flex-grow">
+        <div class="d-none log-display__md flex-grow">
             <div class="flex justify-end align-items-center">
                 <IconsLogIn />
                 <p class="ps-1">
@@ -24,9 +25,13 @@
 
     /* mobile */
     @media screen and (max-width: 768px) {
-        .padding-page {
+        .white-band {
+            height: 44px;
+            background-color: white;
+        }
+
+        .padding-sm {
             padding: 0;
-            padding-top: 44px;
         }
     }
 
@@ -40,7 +45,7 @@
 
         /* toggle visibility */
 
-        .d-none {
+        .log-display__md {
             display: inline;
         }
 
