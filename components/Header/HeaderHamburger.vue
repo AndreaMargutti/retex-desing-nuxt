@@ -46,7 +46,6 @@ const info = ref([
 <style scoped lang="scss">
     #hamburger-menu {
         background-color: white;
-        position: fixed;
     }
 
     h1 {

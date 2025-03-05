@@ -1,6 +1,6 @@
 <script setup>
 import AppHeader from '~/components/Header/AppHeader.vue';
-const config = useRuntimeConfig();
+// const config = useRuntimeConfig();
 // const { data } = await useAsyncData( () => {
 //   return $fetch(`https://newsapi.org/v2/everything?q=politics&apiKey=${config.apiSecret}`);
 // })
@@ -15,7 +15,10 @@ console.log(articles);
 </script>
 
 <template>
-    <AppHeader/>
+    <div>
+        <AppHeader/>
+        <MainAppMain />
+    </div>
 </template>
 
 <style scoped>
