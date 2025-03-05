@@ -3,11 +3,11 @@
 
 <template>
     <div class="white-band" />
-    <div class="flex text-center align-items-center padding-sm padding-page">
-        <div class="flex-basis-50 border border--right--0 py-1">
+    <div class="flex text-center text__md-start align-items-center padding-sm padding-page">
+        <div class="flex-basis-50 flex-basis__md-auto border border--right--0 border__md-0 py-1">
             Contribuisci
         </div>
-        <div class="flex-basis-50 border py-1">
+        <div class="flex-basis-50 flex-basis__md-auto border border__md-0 py-1">
             Abbonati
         </div>
         <div class="d-none log-display__md flex-grow">
@@ -39,7 +39,7 @@
     /* first breakpoint */
     @media screen and (min-width: 768px) {
         /* remove border */
-        .border {
+        .border__md-0 {
             border: 0;
         }
 
@@ -51,11 +51,11 @@
 
         /* adjust layout */
 
-        .text-center {
+        .text__md-start {
             text-align: start;
         }
 
-       .flex-basis-50 {
+       .flex-basis__md-auto {
         flex-basis: auto
        }
     }
