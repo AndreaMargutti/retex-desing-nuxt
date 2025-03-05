@@ -20,7 +20,7 @@ const toggleBtns = () => {
         </ul>
         <IconsText />
     </div>
-    <div id="second-filter">
+    <div id="second-filter" class="flex-md justify-between">
         <div class="padding-bottom flex align-items-center gap-12">
             <h1> {{ topics[0].title }}</h1>
             <IconsDropDown @click="toggleBtns"/>
@@ -32,6 +32,7 @@ const toggleBtns = () => {
                  v-show="topic.title != 'Tutti i temi'" 
                  :key="topic.id" 
                  :title="topic.title"
+                 :color="topic.color"
              />
          </div>
     </div>
@@ -39,8 +40,12 @@ const toggleBtns = () => {
 
 <style scoped lang="scss">
 // responsive
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 1100px) {
     .d-none {
+        display: flex;
+    }
+
+    .flex-md {
         display: flex;
     }
 }

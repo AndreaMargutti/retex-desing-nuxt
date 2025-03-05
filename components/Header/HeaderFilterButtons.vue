@@ -1,9 +1,9 @@
 <script setup>
-const props = defineProps(['title'])
+const props = defineProps(['title', 'color'])
 </script>
 
 <template>
-    <button>
+    <button :style="{backgroundColor: color}" class="white-bg">
         {{ title.toUpperCase() }}
     </button>
 </template>
@@ -18,5 +18,11 @@ const props = defineProps(['title'])
         font-family: 'Raleway';
         font-weight: 700;
         font-size: 10px;
+    }
+
+    @media screen and (max-width: 1099px) {
+        .white-bg {
+            background-color: white !important;
+        }
     }
 </style>

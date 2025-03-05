@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <ul class="flex">
+    <ul class="flex flex-column flex-row">
         <li v-for="{ id, label } in info" :key="id" class="text-center">
             <p>{{ label }}</p>
         </li>
@@ -14,6 +14,10 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
+.flex-column {
+    flex-direction: column;
+}
+
 ul {
     height: 100%;
 }
@@ -27,6 +31,12 @@ li {
     p {
         font-size: 14px;
         font-weight: 400;
+    }
+}
+
+@media screen and (min-width: 970px) {
+    .flex-row {
+        flex-direction: row;
     }
 }
 </style>
