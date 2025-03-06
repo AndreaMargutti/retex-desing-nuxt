@@ -6,9 +6,9 @@ const props = defineProps({
 
 <template>
     <div class="grid-item">
-        <!-- inserisco componente tag -->
          <MainArticleTag :tag="singleArticle.tag"/>
          <!-- inserisco componente title -->
+          <MainArticleTitle :title="singleArticle.title"/>
           <!-- inserisco componente autore -->
     </div>
 </template>
