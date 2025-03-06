@@ -7,8 +7,12 @@ const { data } = await useAsyncData('', () => {
 
 const articles = data?.value?.articles ?? [];
 console.log(articles);
+
+const topArticles = articles.toSpliced(4);
+console.log(topArticles);
+console.log(articles);
 </script>
 
 <template>
-    <MainTopArticles :articles="articles"/>
+    <MainTopArticles :articles="topArticles"/>
 </template>
