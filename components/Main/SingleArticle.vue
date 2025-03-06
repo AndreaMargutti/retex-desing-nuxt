@@ -5,8 +5,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <div>
-        <h1>{{ singleArticle.title }}</h1>
+    <div class="grid-item">
+        <!-- inserisco componente tag -->
+         <MainArticleTag :tag="singleArticle.tag"/>
+         <!-- inserisco componente title -->
+          <!-- inserisco componente autore -->
     </div>
 </template>
 
