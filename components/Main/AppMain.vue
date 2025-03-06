@@ -15,4 +15,6 @@ console.log(articles);
 
 <template>
     <MainTopArticles :articles="topArticles"/>
+    <MainContributeBanner />
+    <MainCitationBanner />
 </template>
