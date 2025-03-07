@@ -9,7 +9,7 @@
         <MainSingleArticle 
         v-for="(article, index) in articles" :key="article.id" 
         :singleArticle="article"
-        :index="index"
+        :index="article.id"
         />
     </div>
 </template>

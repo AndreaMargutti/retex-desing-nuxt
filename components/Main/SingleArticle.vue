@@ -7,28 +7,36 @@ const props = defineProps({
 
 <template>
     <div 
-    :style="{ 'background-image': 'url(' + singleArticle.imgUrl + ')' }"
+    :style="[ index === 1 ? { 'background-image': 'url(' + singleArticle.imgUrl + ')' } : { 'background-color': white}]"
     :class="{
-        'grid-item-8': index === 1,
-        'grid-item-5': index === 2 || index === 3,
+        'grid-item-8': index === 2,
+        'grid-item-5': index === 3 || index === 4,
     }"
     class="grid-item"
     >
-         <!-- <MainArticleBackgroundImage 
+        <div>
+            <MainArticleBackgroundImage
+            v-show="index === 2"
             :img="singleArticle.imgUrl" 
-            class="article-img"
-         /> -->
+            class="article-img md-none-img"
+            />
+            <!-- inserisco componenti icone -->
+        </div>
          <div
             :class="{
-                'padding-top-144': index === 0, 
-                'padding-top-250': index === 1,
-                'padding-top-140': index === 2,
-                'padding-top-60': index === 3
+                'padding-top-144': index === 1, 
+                'padding-top-24': index === 2,
+                'padding-top-484': index === 2,
+                'padding-top-140': index === 3,
+                'padding-top-60': index === 4
              }"
             class="articles-info min-height-100"
          >
              <MainArticleTag :tag="singleArticle.tag"/>
-             <MainArticleTitle :title="singleArticle.title"/>
+             <MainArticleTitle 
+                :title="singleArticle.title" 
+                :id="props.index"
+            />
              <MainArticleAuthor :author="singleArticle.author" :date="singleArticle.date"/>
          </div>
     </div>
@@ -41,35 +49,30 @@ const props = defineProps({
     background-position: center;
 }
 
+.article-img {
+    width: 80%;
+    margin: 20px auto;
+}
+
 .articles-info {
     padding: 24px 16px;
 }
 
-.p-relative {
-    position: relative;
-}
-
-.p-absolute {
-    position: absolute;
-}
 
 .padding-top-144 {
     padding-top: 144px;
 }
 
-.padding-top-250 {
-    padding-top: 250px;
-    background-color: blue;
+.padding-top-24 {
+    padding-top: 24px;
 }
 
 .padding-top-140 {
     padding-top: 140px;
-    background-color: dodgerblue;
 }
 
 .padding-top-60 {
     padding-top: 60px;
-    background-color: aqua;
 }
 
 @media screen and (min-width: 769px) {
@@ -92,6 +95,14 @@ const props = defineProps({
 
     .min-height-100 {
         min-height: 100%;
+    }
+
+    .md-none-img {
+        display: none;
+    }
+
+    .padding-top-484 {
+        padding-top: 484px;
     }
 }
 </style>

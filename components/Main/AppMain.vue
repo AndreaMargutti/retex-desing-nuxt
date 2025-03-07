@@ -17,4 +17,5 @@ console.log(articles);
     <MainTopArticles :articles="topArticles"/>
     <MainContributeBanner />
     <MainCitationBanner />
+    <MainBlog />
 </template>
