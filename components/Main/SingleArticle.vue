@@ -7,19 +7,23 @@ const props = defineProps({
 
 <template>
     <div 
+    :style="{ 'background-image': 'url(' + singleArticle.imgUrl + ')' }"
     :class="{
         'grid-item-8': index === 1,
         'grid-item-5': index === 2 || index === 3,
     }"
     class="grid-item"
     >
-         <!-- <MainArticleBackgroundImage :img="singleArticle.imgUrl" class="article-img"/> -->
+         <!-- <MainArticleBackgroundImage 
+            :img="singleArticle.imgUrl" 
+            class="article-img"
+         /> -->
          <div
             :class="{
                 'padding-top-144': index === 0, 
                 'padding-top-250': index === 1,
                 'padding-top-140': index === 2,
-                'padding-top-60': index === 3  
+                'padding-top-60': index === 3
              }"
             class="articles-info min-height-100"
          >
@@ -32,13 +36,25 @@ const props = defineProps({
 
 <style scoped lang="scss">
 
+.grid-item {
+    background-size: cover;
+    background-position: center;
+}
+
 .articles-info {
     padding: 24px 16px;
 }
 
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
 .padding-top-144 {
     padding-top: 144px;
-    background-color: red;
 }
 
 .padding-top-250 {
