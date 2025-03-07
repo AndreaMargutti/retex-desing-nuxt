@@ -7,8 +7,9 @@
 <template>
     <div class="grid-container">
         <MainSingleArticle 
-        v-for="article in articles" :key="article.id" 
+        v-for="(article, index) in articles" :key="article.id" 
         :singleArticle="article"
+        :index="index"
         />
     </div>
 </template>
@@ -16,5 +17,12 @@
 <style scoped lang="scss">
 .grid-container {
     display: grid;
+    grid-template-columns: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 </style>

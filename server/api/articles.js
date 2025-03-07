@@ -31,17 +31,17 @@ export default defineEventHandler(async () => {
             },
             {
                 id: 3,
-                title: "Roccella Jonica, la Lampedusa che l'Italia ignora",
+                title: "Gli startupper? Li trovi al bistrot. Così il DumBo incuba relazioni",
                 tag: {
-                    label: "Migranti",
+                    label: "Esperimenti",
                     color: "#FFFFFF"
                 },
                 imgUrl: "https://via.placeholder.com/600x400.png?text=News+Image+1",
                 author: {
-                    name: "Alessandro Puglia",
+                    name: "Diletta Grella",
                     profile_pic: "https://via.placeholder.com/150.png?text=Author+1"
                 },
-                date: "29 giugno 2022"
+                date: "14 luglio 2022"
             },
             {
                 id: 4,

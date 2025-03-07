@@ -18,6 +18,7 @@ console.log(articles);
     <div>
         <AppHeader/>
         <MainAppMain />
+        <FooterAppFooter />
     </div>
 </template>
 
