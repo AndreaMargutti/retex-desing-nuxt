@@ -34,8 +34,8 @@ const props = defineProps({
          >
              <MainArticleTag :tag="singleArticle.tag"/>
              <MainArticleTitle 
-                :title="singleArticle.title" 
                 :id="props.index"
+                :title="singleArticle.title" 
             />
              <MainArticleAuthor :author="singleArticle.author" :date="singleArticle.date"/>
          </div>
