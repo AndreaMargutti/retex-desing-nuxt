@@ -11,6 +11,9 @@
     "lint": "eslint",
     "lint:fix": "eslint . --fix"
   },
+  //TODO: 
+  // - differenza tra `dependecies` e `devDependecies`
+  // - cosa conviene usare in Nuxt?
   "dependencies": {
     "@nuxt/eslint": "^1.1.0",
     "@nuxt/fonts": "^0.10.3",

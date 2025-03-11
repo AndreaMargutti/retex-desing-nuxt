@@ -1,4 +1,9 @@
 <script setup>
+/**
+ * TODO:
+ * - gestiamo questa logica con la composable
+ * - lang `ts`
+ */
 const hamburger = ref(false);
 const emit = defineEmits(["hamburgerToggle"]);
 

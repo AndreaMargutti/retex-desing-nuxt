@@ -64,6 +64,13 @@ const info = ref([
 </template>
 
 <style scoped lang="scss">
+/**
+ * TODO:
+ * - rimuovere #
+ * - ripasso dei selettori css
+ * - Attenzione alla SEO: in pagina possiamo avere solamente un <h1 />
+ * - creare un file `typography` dove specificare tutti gli stili globali
+ */
 #hamburger-menu {
   background-color: white;
 }

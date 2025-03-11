@@ -5,6 +5,11 @@
   <div
     class="flex text-center text__md-start align-items-center padding-sm padding-page"
   >
+    <!--
+    TODO:
+      - aggiungere HeaderTopLink (prop: link, label, icon)
+      - mi aspetto l'utilizzo di <NuxtLink />
+  -->
     <div
       class="flex-basis-50 flex-basis__md-auto border border--right--0 border__md-0 py-1"
     >
@@ -24,6 +29,11 @@
 
 <style scoped>
 /* mobile */
+/**
+* TODO:
+* - come posso centralizzare le media query? (tip: usare i mixin)
+* - non ha senso sovrascrivere le utility classes
+*/
 @media screen and (max-width: 768px) {
   .white-band {
     height: 44px;

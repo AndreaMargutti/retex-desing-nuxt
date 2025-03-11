@@ -1,4 +1,5 @@
 <script setup>
+//TODO: perché una `ref`?
 const topics = ref([
   { id: 1, title: "Tutti i temi", color: "null" },
   { id: 2, title: "Ambiente", color: "#E2F1E8" },
@@ -10,6 +11,23 @@ const topics = ref([
   { id: 8, title: "Welfare", color: "#FFFFFF" },
 ]);
 
+/**
+ * TODO:
+ * - manca default di hamburger status
+ * - rimuovere console.log
+ * - spostare questa logica in una composable `useHamburgerMenu`
+ *
+ * export default useHamburgerMenu() {
+ *  const status = useState(false)
+ *
+ *  changeStauts = (status) => status.value = status;
+ *
+ *  export {
+ *  status,
+ *  changeStatus
+ * }
+ * }
+ */
 let hamburgerStatus = ref();
 function changeStatus(status) {
   hamburgerStatus.value = status;
@@ -21,6 +39,15 @@ function changeStatus(status) {
   <HeaderCta />
   <HeaderSearchBar @hamburger-toggle="changeStatus" />
   <HeaderFilter :topics="topics" :hamburgerStatus="hamburgerStatus" />
+  <!--
+    <HeaderTop />
+      <HeaderTopLink />
+    <Header[Container] />
+      <HeaderHamburgerMenu />
+      <HeaderSearch />
+    <HeaderNavbar />
+    <HeaderMenu />
+  -->
 </template>
 
 <style scoped></style>

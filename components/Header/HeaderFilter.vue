@@ -14,6 +14,10 @@ const toggleBtns = () => {
 </script>
 
 <template>
+  <!--
+    TODO: 
+      - abbiamo davvero bisogno di nascondere i filtri quando abbiamo aperto il menù? Non possiamo risolvere con il layout?
+  -->
   <div
     v-show="!hamburgerStatus"
     class="d-none flex-md justify-between padding-page border border-bottom align-items-center"
