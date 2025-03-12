@@ -1,13 +1,11 @@
-<!-- eslint-disable @typescript-eslint/no-unused-vars -->
-<!-- eslint-disable no-unused-vars -->
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   topics: { type: Array, required: true },
-  hamburgerStatus: { type: Boolean, required: true },
 });
 
-const showBtns = ref(false);
+const { status } = useHamburger();
 
+const showBtns = ref(false);
 const toggleBtns = () => {
   showBtns.value = !showBtns.value;
 };
@@ -19,7 +17,7 @@ const toggleBtns = () => {
       - abbiamo davvero bisogno di nascondere i filtri quando abbiamo aperto il menù? Non possiamo risolvere con il layout?
   -->
   <div
-    v-show="!hamburgerStatus"
+    v-show="status"
     class="d-none flex-md justify-between padding-page border border-bottom align-items-center"
   >
     <ul class="flex align-items-center">

@@ -1,24 +1,15 @@
-<script setup>
-/**
- * TODO:
- * - gestiamo questa logica con la composable
- * - lang `ts`
- */
-const hamburger = ref(false);
-const emit = defineEmits(["hamburgerToggle"]);
+<script setup lang="ts">
 
-const toggleHamburger = () => {
-  hamburger.value = !hamburger.value;
-  emit("hamburgerToggle", hamburger.value);
-};
-</script>
+const { status, changeStatus } = useHamburger()
+
+ </script>
 
 <template>
   <div class="flex justify-between">
     <!-- hamburger meni -->
     <div class="searchbar-section">
-      <IconsHamburger v-if="!hamburger" @click="toggleHamburger" />
-      <IconsX v-else @click="toggleHamburger" />
+      <IconsHamburger v-if="status" @click="changeStatus" />
+      <IconsX v-else @click="changeStatus" />
     </div>
     <div class="flex-grow searchbar-section" />
     <!-- search -->
@@ -27,7 +18,7 @@ const toggleHamburger = () => {
     </div>
   </div>
   <div>
-    <HeaderHamburger v-if="hamburger" />
+    <HeaderHamburger v-if="!status" />
   </div>
 </template>
 
