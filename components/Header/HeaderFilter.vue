@@ -18,9 +18,9 @@ const toggleBtns = () => {
   -->
   <div
     v-show="status"
-    class="d-none flex-md justify-between padding-page border border-bottom align-items-center"
+    class="d-none flex-md justify-between padding-page border border-bottom align-center"
   >
-    <ul class="d-flex align-items-center">
+    <ul class="d-flex align-center">
       <li v-for="{ id, title } in topics" :key="id">
         <h1>{{ title }}</h1>
       </li>
@@ -28,12 +28,12 @@ const toggleBtns = () => {
     <IconsText />
   </div>
   <div class="d-flex-md justify-between padding-filter background-gray">
-    <div class="padding-bottom d-flex align-items-center gap-12">
+    <div class="padding-bottom d-flex align-center gap-12">
       <h1 id="filter-title">{{ topics[0].title }}</h1>
       <IconsDropDown class="icon-display" @click="toggleBtns" />
     </div>
     <!-- TODO: inserire bottoni -->
-    <div v-show="!showBtns" class="filter-buttons align-items-center">
+    <div v-show="!showBtns" class="filter-buttons align-center">
       <HeaderFilterButtons
         v-for="topic in topics"
         v-show="topic.title != 'Tutti i temi'"

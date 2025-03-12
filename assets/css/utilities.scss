@@ -5,23 +5,17 @@
 *   - `#f4f4f4` quante volte lo ripeti? Che alternative abbiamo all'utilizzo del hex?
 */
 
-/* margin */
-
-.mt-1 {
-  margin-top: 30px;
-}
-
 /* display */
 
 .d-none {
   display: none;
 }
 
-/* flex */
-
 .d-flex {
   display: flex;
 }
+
+/* flex */
 
 .flex-basis-50 {
   flex-basis: 50%;
@@ -43,7 +37,7 @@
   justify-content: end;
 }
 
-.align-items-center {
+.align-center {
   align-items: center;
 }
 

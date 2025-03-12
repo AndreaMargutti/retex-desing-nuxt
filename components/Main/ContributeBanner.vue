@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex-md align-items-center justify-between">
+  <div class="container flex-md align-center justify-between">
     <div>
       <h1>Il tuo supporto è fondamentale</h1>
     </div>
