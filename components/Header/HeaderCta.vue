@@ -12,8 +12,11 @@ const headerTopLink = [
 <template>
   <div class="d-flex padding-page topHeader--padding--top">
     <div v-for="{id,label, icon} in headerTopLink" :key="id">
-      <component :is="icon" />
-      <NuxtLink> {{ label }}</NuxtLink>
+      <div 
+        :class="{ 'log-in__display': id === 3}">
+        <component :is="icon" />
+        <NuxtLink> {{ label }}</NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +38,16 @@ const headerTopLink = [
 
   @include for-desktop() {
     padding-top: 0;
+  }
+}
+
+.log-in {
+
+  &__display {
+    display: none;
+    @include for-desktop() {
+      display: flex;
+    }
   }
 }
 </style>
