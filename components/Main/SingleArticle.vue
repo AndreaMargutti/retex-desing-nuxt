@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   singleArticle: { type: Object, required: true },
   index: { type: Number, required: true },

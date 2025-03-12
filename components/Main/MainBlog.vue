@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const appConfig = useAppConfig();
 
 const { data } = await useAsyncData(() => {

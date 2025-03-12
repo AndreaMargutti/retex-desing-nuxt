@@ -11,7 +11,7 @@ defineProps<{
   </button>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .button {
   background-color: red;
   padding: 16px 24px;

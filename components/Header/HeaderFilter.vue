@@ -46,6 +46,7 @@ const toggleBtns = () => {
 </template>
 
 <style scoped lang="scss">
+
 h1 {
   font-family: "Raleway";
   font-size: 28px;

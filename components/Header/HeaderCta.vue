@@ -12,19 +12,15 @@ const headerTopLink = [
 <template>
   <div class="white-band" />
   <div class="flex text-center text__md-start align-items-center padding-sm padding-page">
-    <!--
-    TODO:
-      - aggiungere HeaderTopLink (prop: link, label, icon)
-      - mi aspetto l'utilizzo di <NuxtLink />
-    -->
     <div v-for="{id,label, icon} in headerTopLink" :key="id">
       <component :is="icon" />
       <NuxtLink> {{ label }}</NuxtLink>
     </div>
+    <h1>titolo</h1>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 /* mobile */
 /**
 * TODO:

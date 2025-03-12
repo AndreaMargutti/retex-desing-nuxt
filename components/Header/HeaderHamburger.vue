@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const info = ref([
   { id: 1, label: "Chi Siamo" },
   { id: 2, label: "Comitato Editoriale" },

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   author: { type: Object, required: true },
   date: { type: String, required: false },

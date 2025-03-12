@@ -3,8 +3,4 @@
 *   - che differenza c'è tra variabili scss e custom properties?
 */
 
-:root {
-  --main--title-size: 51px;
-  --author--name--size: 14px;
-  --article--title--color: white;
-}
+$article-title--color: red;
