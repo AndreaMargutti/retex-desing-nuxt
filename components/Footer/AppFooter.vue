@@ -1,26 +1,22 @@
+<script setup lang="ts">
+
+const fooInfo = [
+  { id: 1, label: 'Il Gruppo' },
+  { id: 2, label: 'Note Legali' },
+  { id: 3, label: 'Chi Siamo' },
+  { id: 4, label: "Condizioni d'Uso" },
+  { id: 5, label: 'Privacy' },
+  { id: 6, label: 'Scrivici' },
+  { id: 7, label: 'Pubblicità' },
+]
+
+</script>
+
 <template>
   <div class="footer">
     <ul class="footer--list">
-      <li class="footer--list--item">
-        <h5>Il gruppo</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Note Legali</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Chi Siamo</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Condizioni d'Uso</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Privacy</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Scrivici</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Pubblicità</h5>
+      <li v-for="{ id, label } in fooInfo" :key="id" class="footer--list--item">
+        <h5>{{ label }}</h5>
       </li>
     </ul>
 
