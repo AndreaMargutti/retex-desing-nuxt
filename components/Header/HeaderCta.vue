@@ -10,13 +10,11 @@ const headerTopLink = [
 </script>
 
 <template>
-  <div class="white-band" />
-  <div class="d-flex text-center text__md-start align-center padding-sm padding-page">
+  <div class="d-flex padding-page topHeader--padding--top">
     <div v-for="{id,label, icon} in headerTopLink" :key="id">
       <component :is="icon" />
       <NuxtLink> {{ label }}</NuxtLink>
     </div>
-    <h1>titolo</h1>
   </div>
 </template>
 
@@ -27,38 +25,16 @@ const headerTopLink = [
 * - come posso centralizzare le media query? (tip: usare i mixin)
 * - non ha senso sovrascrivere le utility classes
 */
-@media screen and (max-width: 768px) {
-  .white-band {
-    height: 44px;
-    background-color: white;
-  }
 
-  .padding-sm {
-    padding: 0;
-  }
+@mixin for-desktop {
+  @media screen and (min-width: 768px) { @content; }
 }
 
-/* first breakpoint */
-@media screen and (min-width: 768px) {
-  /* remove border */
-  .border__md-0 {
-    border: 0;
-  }
+.topHeader--padding--top {
+  padding-top: 44px;
 
-  /* toggle visibility */
-
-  .log-display__md {
-    display: inline;
-  }
-
-  /* adjust layout */
-
-  .text__md-start {
-    text-align: start;
-  }
-
-  .flex-basis__md-auto {
-    flex-basis: auto;
+  @include for-desktop() {
+    padding-top: 0;
   }
 }
 </style>
