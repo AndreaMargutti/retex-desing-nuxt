@@ -1,26 +1,25 @@
+<script setup lang="ts">
+import { IconsLogIn } from '#components';
+
+const headerTopLink = [
+  { id: 1, label: 'Contribuisci', icon: '' },
+  { id: 2, label: 'Abbonati', icon: '' },
+  { id: 3, label: 'Accedi', icon: IconsLogIn }
+]
+
+</script>
+
 <template>
   <div class="white-band" />
-  <div
-    class="flex text-center text__md-start align-items-center padding-sm padding-page"
-  >
+  <div class="flex text-center text__md-start align-items-center padding-sm padding-page">
     <!--
     TODO:
       - aggiungere HeaderTopLink (prop: link, label, icon)
       - mi aspetto l'utilizzo di <NuxtLink />
-  -->
-    <div
-      class="flex-basis-50 flex-basis__md-auto border border--right--0 border__md-0 py-1"
-    >
-      Contribuisci
-    </div>
-    <div class="flex-basis-50 flex-basis__md-auto border border__md-0 py-1">
-      Abbonati
-    </div>
-    <div class="d-none log-display__md flex-grow">
-      <div class="flex justify-end align-items-center">
-        <IconsLogIn />
-        <p class="ps-1">Accedi</p>
-      </div>
+    -->
+    <div v-for="{id,label, icon} in headerTopLink" :key="id">
+      <component :is="icon" />
+      <NuxtLink> {{ label }}</NuxtLink>
     </div>
   </div>
 </template>

@@ -15,14 +15,4 @@ const topics = [
   <HeaderCta />
   <HeaderSearchBar />
   <HeaderFilter :topics="topics" />
- 
-  <!--
-    <HeaderTop />
-      <HeaderTopLink />
-    <Header[Container] />
-      <HeaderHamburgerMenu />
-      <HeaderSearch />
-    <HeaderNavbar />
-    <HeaderMenu />
-  -->
 </template>
