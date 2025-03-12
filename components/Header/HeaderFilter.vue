@@ -18,7 +18,7 @@ const toggleBtns = () => {
   -->
   <div
     v-show="status"
-    class="d-none flex-md justify-between padding-page border border-bottom align-center"
+    class="d-none flex-md justify-between padding-page border filter--bottom--border align-center"
   >
     <ul class="d-flex align-center">
       <li v-for="{ id, title } in topics" :key="id">
@@ -46,6 +46,10 @@ const toggleBtns = () => {
 </template>
 
 <style scoped lang="scss">
+
+.filter--bottom--border {
+  border-width: 0 0 1px 0;
+}
 
 h1 {
   font-family: "Raleway";
