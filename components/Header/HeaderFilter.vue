@@ -20,15 +20,15 @@ const toggleBtns = () => {
     v-show="status"
     class="d-none flex-md justify-between padding-page border border-bottom align-items-center"
   >
-    <ul class="flex align-items-center">
+    <ul class="d-flex align-items-center">
       <li v-for="{ id, title } in topics" :key="id">
         <h1>{{ title }}</h1>
       </li>
     </ul>
     <IconsText />
   </div>
-  <div class="flex-md justify-between padding-filter background-gray">
-    <div class="padding-bottom flex align-items-center gap-12">
+  <div class="d-flex-md justify-between padding-filter background-gray">
+    <div class="padding-bottom d-flex align-items-center gap-12">
       <h1 id="filter-title">{{ topics[0].title }}</h1>
       <IconsDropDown class="icon-display" @click="toggleBtns" />
     </div>

@@ -11,7 +11,7 @@ const headerTopLink = [
 
 <template>
   <div class="white-band" />
-  <div class="flex text-center text__md-start align-items-center padding-sm padding-page">
+  <div class="d-flex text-center text__md-start align-items-center padding-sm padding-page">
     <div v-for="{id,label, icon} in headerTopLink" :key="id">
       <component :is="icon" />
       <NuxtLink> {{ label }}</NuxtLink>

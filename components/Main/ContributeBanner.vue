@@ -3,7 +3,7 @@
     <div>
       <h1>Il tuo supporto è fondamentale</h1>
     </div>
-    <div class="flex gap-4">
+    <div class="d-flex gap-4">
       <h5>Dai il tuo contributo</h5>
       <svg
         width="24"

@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <ul class="flex flex-column flex-row">
+  <ul class="d-flex flex-column flex-row">
     <li v-for="{ id, label } in info" :key="id" class="text-center">
       <p>{{ label }}</p>
     </li>

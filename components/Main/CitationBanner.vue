@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex gap-12">
+  <div class="container d-flex gap-12">
     <span class="container-icon">
       <svg
         width="34"

@@ -12,7 +12,7 @@ console.log(newsletter);
 </script>
 
 <template>
-  <div v-if="newsletter.length" class="flex flex-wrap">
+  <div v-if="newsletter.length" class="d-flex flex-wrap">
     <div class="flex-item text-center blog__border border-md">
       <h1>Il Blog</h1>
     </div>

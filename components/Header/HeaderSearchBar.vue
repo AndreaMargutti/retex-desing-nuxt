@@ -5,7 +5,7 @@ const { status, changeStatus } = useHamburger()
  </script>
 
 <template>
-  <div class="flex justify-between">
+  <div class="d-flex justify-between">
     <!-- hamburger meni -->
     <div class="searchbar-section">
       <IconsHamburger v-if="status" @click="changeStatus" />

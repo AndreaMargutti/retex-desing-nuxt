@@ -11,7 +11,7 @@ const info = ref([
 
 <template>
   <div id="hamburger-menu">
-    <div class="flex flex-wrap">
+    <div class="d-flex flex-wrap">
       <div
         class="menu-article border menu-article__sm-border menu-article__md-left-border"
       >
