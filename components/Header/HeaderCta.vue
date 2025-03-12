@@ -10,7 +10,7 @@ const headerTopLink = [
 </script>
 
 <template>
-  <div class="d-flex padding-page topHeader--padding--top">
+  <div class="d-flex padding-page topHeader__padding--top">
     <div v-for="{id,label, icon} in headerTopLink" :key="id">
       <div 
         :class="{ 'log-in__display': id === 3}">
@@ -33,11 +33,14 @@ const headerTopLink = [
   @media screen and (min-width: 768px) { @content; }
 }
 
-.topHeader--padding--top {
-  padding-top: 44px;
+.topHeader {
 
-  @include for-desktop() {
-    padding-top: 0;
+  &__padding--top {
+    padding-top: 44px;
+    
+    @include for-desktop() {
+      padding-top: 0;
+    }
   }
 }
 
