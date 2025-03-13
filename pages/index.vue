@@ -5,8 +5,8 @@
 
 <template>
   <div>
-    <HeaderAppHeader />
-    <MainAppMain />
-    <FooterAppFooter />
+    <Header />
+    <Main />
+    <Footer />
   </div>
 </template>
