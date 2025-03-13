@@ -12,7 +12,21 @@ const topics = [
 </script>
 
 <template>
-  <HeaderCta />
+  <div class="d-flex topHeader--padding-top">
+    <HeaderCta />
+  </div>
   <HeaderSearchBar />
   <HeaderFilter :topics="topics" />
 </template>
+
+<style scoped lang="scss">
+
+.topHeader--padding-top {
+  padding-top: 44px;
+
+  @include for-tablet() {
+    padding-top: 0;
+  }
+}
+
+</style>
