@@ -37,19 +37,20 @@
 
 <style scoped lang="scss">
 .banner {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #f4f1de;
 
   @include for-tablet {
     display: flex;
-    padding-top: 84px;
-    padding-bottom: 84px;
+    // padding-top: 5rem;
+    // padding-bottom: 5rem;
+    padding-block: 5rem;
   }
 
   &__title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: black;
     margin-bottom: 14px;
 
