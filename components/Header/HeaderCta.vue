@@ -29,10 +29,6 @@ const headerTopLink = [
 * - non ha senso sovrascrivere le utility classes
 */
 
-@mixin for-desktop {
-  @media screen and (min-width: 768px) { @content; }
-}
-
 .topHeader {
 
   &__padding--top {
