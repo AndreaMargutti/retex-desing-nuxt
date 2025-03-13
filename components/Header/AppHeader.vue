@@ -12,7 +12,7 @@ const topics = [
 </script>
 
 <template>
-  <div class="d-flex topHeader--padding-top">
+  <div class="d-flex topHeader--padding-top topHeader--flex padding-page">
     <HeaderCta />
   </div>
   <HeaderSearchBar />
@@ -26,6 +26,12 @@ const topics = [
 
   @include for-tablet() {
     padding-top: 0;
+  }
+}
+
+.topHeader--flex {
+  @include for-tablet() {
+    justify-content: space-between;
   }
 }
 
