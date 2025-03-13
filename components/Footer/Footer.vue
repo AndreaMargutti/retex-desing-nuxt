@@ -1,15 +1,13 @@
 <script setup lang="ts">
-
 const fooInfo = [
-  { id: 1, label: 'Il Gruppo' },
-  { id: 2, label: 'Note Legali' },
-  { id: 3, label: 'Chi Siamo' },
+  { id: 1, label: "Il Gruppo" },
+  { id: 2, label: "Note Legali" },
+  { id: 3, label: "Chi Siamo" },
   { id: 4, label: "Condizioni d'Uso" },
-  { id: 5, label: 'Privacy' },
-  { id: 6, label: 'Scrivici' },
-  { id: 7, label: 'Pubblicità' },
-]
-
+  { id: 5, label: "Privacy" },
+  { id: 6, label: "Scrivici" },
+  { id: 7, label: "Pubblicità" },
+];
 </script>
 
 <template>

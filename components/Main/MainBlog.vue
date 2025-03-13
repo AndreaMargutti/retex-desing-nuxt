@@ -23,7 +23,7 @@ console.log(newsletter);
       :class="[
         { 'blog__border-bottom': news.id === 4 },
         { 'blog__border-right': news.id === 1 || news.id === 3 },
-        { 'last-blog': news.id === 5}
+        { 'last-blog': news.id === 5 },
       ]"
       class="flex-item blog__border border-md"
     />
@@ -64,15 +64,15 @@ h1 {
 .last-blog {
   display: none;
 
- @include for-desktop () {
+  @include for-desktop() {
     display: inline;
-  } 
+  }
 }
 
 .all-blog-item {
   display: block;
 
-  @include for-desktop () {
+  @include for-desktop() {
     display: none;
   }
 }

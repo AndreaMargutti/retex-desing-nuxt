@@ -24,8 +24,7 @@ const { status } = useHamburger();
 </template>
 
 <style scoped lang="scss">
-
-.container{
+.container {
   @include for-desktop() {
     height: 100vh;
     display: flex;
@@ -46,5 +45,4 @@ const { status } = useHamburger();
     justify-content: space-between;
   }
 }
-
 </style>

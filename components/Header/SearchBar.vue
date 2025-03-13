@@ -1,8 +1,6 @@
 <script setup lang="ts">
-
-const { status, changeStatus } = useHamburger()
-
- </script>
+const { status, changeStatus } = useHamburger();
+</script>
 
 <template>
   <div class="d-flex justify-between">
@@ -27,7 +25,7 @@ const { status, changeStatus } = useHamburger()
   border-right: 0;
   padding: 16px;
 
-  @include for-tablet () {
+  @include for-tablet() {
     padding: 40px;
     border-top: 1px solid;
   }

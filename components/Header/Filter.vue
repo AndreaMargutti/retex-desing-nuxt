@@ -10,7 +10,9 @@ const toggleBtns = () => {
 </script>
 
 <template>
-  <div class="filter justify-between align-center padding-page topFilter--padding border filter--bottom-border">
+  <div
+    class="filter justify-between align-center padding-page topFilter--padding border filter--bottom-border"
+  >
     <ul class="d-flex align-center">
       <li v-for="{ id, title } in topics" :key="id" class="filter--item">
         <h3 class="filter--title">{{ title }}</h3>
@@ -36,11 +38,10 @@ const toggleBtns = () => {
 </template>
 
 <style scoped lang="scss">
-
 .filter {
   display: none;
 
-  @include for-desktop () {
+  @include for-desktop() {
     display: flex;
   }
 }
@@ -68,7 +69,7 @@ const toggleBtns = () => {
 .filter-buttons {
   display: block;
 
-  @include for-desktop () {
+  @include for-desktop() {
     display: flex;
   }
 }
@@ -84,15 +85,15 @@ const toggleBtns = () => {
 .padding-filter {
   padding: 24px 16px;
 
-  @include for-desktop () {
-    padding: 64px 40px;  
+  @include for-desktop() {
+    padding: 64px 40px;
   }
 }
 
 .icon-display {
   display: block;
 
-  @include for-desktop () {
+  @include for-desktop() {
     display: none;
   }
 }
