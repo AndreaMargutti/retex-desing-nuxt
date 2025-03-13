@@ -22,19 +22,13 @@ const headerTopLink = [
 </template>
 
 <style scoped lang="scss">
-/* mobile */
-/**
-* TODO:
-* - come posso centralizzare le media query? (tip: usare i mixin)
-* - non ha senso sovrascrivere le utility classes
-*/
 
 .topHeader {
 
   &__padding--top {
     padding-top: 44px;
     
-    @include for-desktop() {
+    @include for-tablet() {
       padding-top: 0;
     }
   }
@@ -44,7 +38,7 @@ const headerTopLink = [
 
   &__display {
     display: none;
-    @include for-desktop() {
+    @include for-tablet() {
       display: flex;
     }
   }
