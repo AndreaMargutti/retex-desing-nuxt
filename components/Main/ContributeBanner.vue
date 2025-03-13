@@ -1,10 +1,10 @@
 <template>
-  <div class="container flex-md align-center justify-between">
+  <div class="padding-page banner align-center justify-between">
     <div>
-      <h1>Il tuo supporto è fondamentale</h1>
+      <h1 class="banner__title">Il tuo supporto è fondamentale</h1>
     </div>
     <div class="d-flex gap-4">
-      <h5>Dai il tuo contributo</h5>
+      <h5 class="banner__cta">Dai il tuo contributo</h5>
       <svg
         width="24"
         height="24"
@@ -36,18 +36,30 @@
 </template>
 
 <style scoped lang="scss">
-.container {
-  padding: 32px 16px;
+.banner {
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color: #f4f1de;
 
-  h1 {
+  @include for-tablet {
+    display: flex;
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  &__title {
     font-weight: 700;
     font-size: 24px;
     color: black;
     margin-bottom: 14px;
+
+    @include for-tablet {
+      font-size: 40px;
+      margin-bottom: 0;
+    }
   }
 
-  h5 {
+  &__cta {
     font-weight: 700;
     font-size: 14px;
     color: black;
@@ -56,20 +68,5 @@
 
 .gap-4 {
   gap: 4px;
-}
-
-@media screen and (min-width: 769px) {
-  .container {
-    padding: 84px 40px;
-
-    h1 {
-      font-size: 40px;
-      margin-bottom: 0;
-    }
-  }
-
-  .flex-md {
-    display: flex;
-  }
 }
 </style>
