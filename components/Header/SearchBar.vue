@@ -28,10 +28,8 @@ const { status, changeStatus } = useHamburger()
   border-top: 0;
   border-right: 0;
   padding: 16px;
-}
 
-@media screen and (min-width: 768px) {
-  .searchbar-section {
+  @include for-tablet () {
     padding: 40px;
     border-top: 1px solid;
   }
