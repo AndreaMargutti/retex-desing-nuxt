@@ -3,8 +3,6 @@ const props = defineProps({
   topics: { type: Array, required: true },
 });
 
-const { status } = useHamburger();
-
 const showBtns = ref(false);
 const toggleBtns = () => {
   showBtns.value = !showBtns.value;
@@ -12,27 +10,19 @@ const toggleBtns = () => {
 </script>
 
 <template>
-  <!--
-    TODO: 
-      - abbiamo davvero bisogno di nascondere i filtri quando abbiamo aperto il menù? Non possiamo risolvere con il layout?
-  -->
-  <div
-    v-show="status"
-    class="d-none flex-md justify-between padding-page topFilter--padding border filter--bottom--border align-center"
-  >
+  <div class="filter justify-between align-center padding-page topFilter--padding border filter--bottom-border">
     <ul class="d-flex align-center">
-      <li v-for="{ id, title } in topics" :key="id">
-        <h1>{{ title }}</h1>
+      <li v-for="{ id, title } in topics" :key="id" class="filter--item">
+        <h3 class="filter--title">{{ title }}</h3>
       </li>
     </ul>
     <IconsText />
   </div>
-  <div class="d-flex-md justify-between padding-filter background-gray">
-    <div class="padding-bottom d-flex align-center gap-12">
-      <h1 id="filter-title">{{ topics[0].title }}</h1>
+  <div class="filter-buttons justify-between padding-filter background-gray">
+    <div class="d-flex align-center gap-12 filter--title-big__padding-bottom">
+      <h3 class="filter--title__big">{{ topics[0].title }}</h3>
       <IconsDropDown class="icon-display" @click="toggleBtns" />
     </div>
-    <!-- TODO: inserire bottoni -->
     <div v-show="!showBtns" class="filter-buttons align-center">
       <HeaderFilterButtons
         v-for="topic in topics"
@@ -47,59 +37,69 @@ const toggleBtns = () => {
 
 <style scoped lang="scss">
 
+.filter {
+  display: none;
+
+  @include for-desktop () {
+    display: flex;
+  }
+}
+
 .topFilter--padding {
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
-.filter--bottom--border {
-  border-width: 0 0 1px 0;
+.filter--bottom-border {
+  border-bottom-width: 1px;
 }
 
-h1 {
+.filter--title {
   font-family: "Raleway";
   font-size: 28px;
   font-weight: 700;
+
+  &__big {
+    font-weight: 700;
+    font-size: 51px;
+  }
 }
 
-li {
+.filter-buttons {
+  display: block;
+
+  @include for-desktop () {
+    display: flex;
+  }
+}
+
+.filter--item {
   padding: 8px;
 }
 
-.padding-bottom {
+.filter--title-big__padding-bottom {
   padding-bottom: 12px;
 }
 
 .padding-filter {
   padding: 24px 16px;
-}
 
-#filter-title {
-  font-size: 51px;
+  @include for-desktop () {
+    padding: 64px 40px;  
+  }
 }
 
 .icon-display {
   display: block;
+
+  @include for-desktop () {
+    display: none;
+  }
 }
 
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-// responsive
-@media screen and (min-width: 1100px) {
-  .flex-md {
-    display: flex;
-  }
-
-  .padding-filter {
-    padding: 64px 40px;
-  }
-
-  .icon-display {
-    display: none;
-  }
 }
 </style>
