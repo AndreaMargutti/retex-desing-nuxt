@@ -20,22 +20,22 @@ const info = [
 </script>
 
 <template>
-
-    <div class="d-flex flex-wrap">
-      <div 
-        v-for="{id, title, description} in sections" :key="id"
-        class="menu-article border menu-article__border"
-      >
-        <h2 class="menu-article__title">{{ title }}</h2>
-        <p class="menu-article__description">
-          {{ description }}
-        </p>
-      </div>
-    </div>
-    <div id="hamburger-ft">
-      <HeaderHamburgerFooter :info="info" />
-    </div>
-
+<div class="menu-container">
+  <div class="d-flex flex-wrap menu-article__container">
+    <div 
+    v-for="{id, title, description} in sections" :key="id"
+    class="menu-article border menu-article__border"
+    >
+    <h2 class="menu-article__title">{{ title }}</h2>
+    <p class="menu-article__description">
+      {{ description }}
+    </p>
+  </div>
+  </div>
+  <div>
+    <HeaderHamburgerFooter :info="info" />
+  </div>
+</div>
 </template>
 
 <style scoped lang="scss">
@@ -43,10 +43,24 @@ const info = [
  * - creare un file `typography` dove specificare tutti gli stili globali
  */
 
+ .menu-container {
+   height: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .menu-article__container{
+  height: 100%;
+}
+
 .menu-article {
   flex-basis: calc(100%);
-  padding: 40px;
-  padding-top: 144px;
+  // padding: 40px;
+  // padding-top: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1rem;
 
   @include for-desktop() {
     flex-basis: calc(100% / 3);

@@ -17,9 +17,7 @@ const { status, changeStatus } = useHamburger()
       <IconsSearch />
     </div>
   </div>
-  <div>
-    <HeaderHamburger v-if="!status" />
-  </div>
+  <HeaderHamburger v-if="!status" />
 </template>
 
 <style scoped lang="scss">

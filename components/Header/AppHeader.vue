@@ -9,17 +9,29 @@ const topics = [
   { id: 7, title: "Società", color: "#FFFFFF" },
   { id: 8, title: "Welfare", color: "#FFFFFF" },
 ];
+
+const { status } = useHamburger();
 </script>
 
 <template>
-  <div class="d-flex topHeader--padding-top topHeader--flex padding-page">
-    <HeaderCta />
+  <div :class="{ container: !status }">
+    <div class="d-flex topHeader--padding-top topHeader--flex padding-page">
+      <HeaderCta />
+    </div>
+    <HeaderSearchBar />
   </div>
-  <HeaderSearchBar />
   <HeaderFilter :topics="topics" />
 </template>
 
 <style scoped lang="scss">
+
+.container{
+  @include for-desktop() {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .topHeader--padding-top {
   padding-top: 44px;

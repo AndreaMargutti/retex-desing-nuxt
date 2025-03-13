@@ -18,7 +18,7 @@ const toggleBtns = () => {
   -->
   <div
     v-show="status"
-    class="d-none flex-md justify-between padding-page border filter--bottom--border align-center"
+    class="d-none flex-md justify-between padding-page topFilter--padding border filter--bottom--border align-center"
   >
     <ul class="d-flex align-center">
       <li v-for="{ id, title } in topics" :key="id">
@@ -46,6 +46,11 @@ const toggleBtns = () => {
 </template>
 
 <style scoped lang="scss">
+
+.topFilter--padding {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 
 .filter--bottom--border {
   border-width: 0 0 1px 0;
