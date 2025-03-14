@@ -9,7 +9,7 @@ const props = defineProps({
 <template>
   <div class="d-flex align-center gap-12" style="margin-top: 10px">
     <div class="profile-pic">
-      <img :src="author.profile_pic" alt="" />
+      <img :src="author.profile_pic" alt="profile_img" />
     </div>
     <div class="profile-info">
       <h6 class="profile-info__name">
@@ -37,9 +37,9 @@ const props = defineProps({
 
 .profile-info {
   color: black;
+
   @include for-tablet() {
-    // not used because there are no images
-    // color: white;
+    color: white;
   }
 
   &__name {

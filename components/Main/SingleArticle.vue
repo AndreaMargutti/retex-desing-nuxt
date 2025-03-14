@@ -3,6 +3,8 @@ const props = defineProps({
   singleArticle: { type: Object, required: true },
   index: { type: Number, required: true },
 });
+
+const backgroundImage = `url(${props.singleArticle.imgUrl})`;
 </script>
 
 <template>
@@ -18,11 +20,11 @@ const props = defineProps({
     }"
     class="article"
   >
-    <MainArticleBackgroundImage
+    <!-- <MainArticleBackgroundImage
       v-show="index === 2"
       :img="singleArticle.imgUrl"
       class="article-img"
-    />
+    /> -->
     <!-- inserisco componenti icone -->
     <div
       :class="{
@@ -47,6 +49,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .article {
+  background-image: v-bind(backgroundImage);
   background-size: cover;
   background-position: center;
 }
