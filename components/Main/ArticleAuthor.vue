@@ -19,8 +19,14 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .profile-pic {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
+
+  @include for-tablet() {
+    width: 3rem;
+    height: 3rem;
+  }
+
   img {
     border-radius: 20px;
   }
@@ -31,19 +37,12 @@ const props = defineProps({
 
   .profile-info__name {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 
   .profile-info__date {
     font-weight: 400;
-    font-size: 10px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .profile-pic {
-    width: 48px;
-    height: 48px;
+    font-size: 0.6rem;
   }
 }
 </style>

@@ -79,8 +79,6 @@ const info = [
 
 .menu-article {
   flex-basis: calc(100%);
-  // padding: 40px;
-  // padding-top: 144px;
   display: flex;
   flex-direction: column;
   justify-content: end;

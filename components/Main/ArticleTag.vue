@@ -5,23 +5,23 @@ const props = defineProps({
 </script>
 
 <template>
-  <button :style="{ 'background-color': tag.color }">
-    <p>{{ tag.label.toLocaleUpperCase() }}</p>
+  <button class="tag" :style="{ 'background-color': tag.color }">
+    <p class="tag__text">{{ tag.label.toLocaleUpperCase() }}</p>
   </button>
 </template>
 
 <style scoped lang="scss">
-button {
+.tag {
   color: black;
-  padding: 4px 12px;
+  padding: 0.25rem 0.75rem;
   border: 1px solid black;
   border-radius: 4px;
   box-shadow: -2px 2px black;
 
-  p {
+  &__text {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 10px;
+    font-size: 0.6rem;
   }
 }
 </style>

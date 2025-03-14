@@ -24,11 +24,11 @@
 
 <style scoped lang="scss">
 .banner {
-  padding: 32px 16px;
+  padding: 2rem 1rem;
   background-color: #f4f4f4;
 
   @include for-tablet() {
-    padding: 84px 40px;
+    padding: 5.25rem 2.5rem;
     background-image: url("https://s3-alpha-sig.figma.com/img/93be/d634/e8c8234062df3f792a0d9928926e5f47?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KOzRsTCWt4so2lUjrPgNPgRBaH7qupJ0vCzjFDN3hmUgiF9DQRQD2eSyvJnMhL5eM2eDYk97ztdY~cEnyj6w5vS32-O9ehkekALra7jrm254iTiRywRegJrQg~7zsD2ZnDU5yNpkbpNKJbXdCv4lIgrFLEbbBS7c1T3smeCTc57ElBne5~ruXdqDQEgorn7sB6UcqPaJaT2aoBFmLva8AjPiCm5V31FENFVLeM1uzey70t3xvWHkGsi~6RUh2Z~C-8nj9leaau3640eXpLbPwSi0oV-5xCKdNqY-kfQiYA5tPhFBDZ1At9s3t-PgqD2o3UgBwVo~vONtsz9vEnVxyA__");
     background-repeat: no-repeat;
     background-position: center;
@@ -36,35 +36,35 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
 
     @include for-tablet() {
       color: white;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 2.5rem;
     }
   }
 
   &__subheading {
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 600;
 
     @include for-tablet() {
       color: white;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 
   &__icon {
-    top: 30px;
-    left: 30px;
+    top: 1.8rem;
+    left: 1.8rem;
 
     @include for-tablet() {
       color: #ffffff1a;
-      width: 54px;
-      height: 43px;
+      width: 3.4rem;
+      height: 2.6px;
     }
   }
 }

@@ -27,22 +27,22 @@
     font-weight: 700;
     font-size: 1.5rem;
     color: black;
-    margin-bottom: 14px;
+    margin-bottom: 0.9rem;
 
     @include for-tablet {
-      font-size: 40px;
+      font-size: 2.5rem;
       margin-bottom: 0;
     }
   }
 
   &__cta {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.1rem;
     color: black;
   }
 }
 
 .gap-4 {
-  gap: 4px;
+  gap: 0.25rem;
 }
 </style>

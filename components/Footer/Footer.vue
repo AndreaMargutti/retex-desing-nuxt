@@ -27,22 +27,22 @@ const fooInfo = [
 <style scoped lang="scss">
 .footer {
   background-color: #f4f4f4;
-  padding: 24px 16px;
+  padding: 2rem 1rem;
 }
 
 .footer--list {
   color: black;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
 
   .footer--list--item {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 }
 
 .footer-info {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 // responsive desktop
