@@ -2,6 +2,7 @@
 const props = defineProps({
   author: { type: Object, required: true },
   date: { type: String, required: false },
+  id: { type: Number, required: true },
 });
 </script>
 
@@ -10,8 +11,10 @@ const props = defineProps({
     <div class="profile-pic">
       <img :src="author.profile_pic" alt="" />
     </div>
-    <div class="profile-info">
-      <h6 class="profile-info__name">{{ author.name }}</h6>
+    <div class="profile-info" :style="id === 1 ? { color: 'white ' } : ''">
+      <h6 class="profile-info__name">
+        {{ author.name }}
+      </h6>
       <p class="profile-info__date">{{ date }}</p>
     </div>
   </div>

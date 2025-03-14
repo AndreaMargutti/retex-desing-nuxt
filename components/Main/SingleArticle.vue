@@ -37,6 +37,7 @@ const props = defineProps({
       <MainArticleTag :tag="singleArticle.tag" />
       <MainArticleTitle :id="props.index" :title="singleArticle.title" />
       <MainArticleAuthor
+        :id="props.index"
         :author="singleArticle.author"
         :date="singleArticle.date"
       />
