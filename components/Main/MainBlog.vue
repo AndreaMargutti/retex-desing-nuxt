@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const appConfig = useAppConfig();
 
 const { data } = await useAsyncData(() => {
@@ -12,9 +12,9 @@ console.log(newsletter);
 </script>
 
 <template>
-  <div v-if="newsletter.length" class="flex flex-wrap">
+  <div v-if="newsletter.length" class="d-flex flex-wrap">
     <div class="flex-item text-center blog__border border-md">
-      <h1>Il Blog</h1>
+      <h3 class="blog__main-title">Il Blog</h3>
     </div>
     <MainSingleBlog
       v-for="news in newsletter"
@@ -23,13 +23,15 @@ console.log(newsletter);
       :class="[
         { 'blog__border-bottom': news.id === 4 },
         { 'blog__border-right': news.id === 1 || news.id === 3 },
+        { 'last-blog': news.id === 5 },
       ]"
       class="flex-item blog__border border-md"
     />
     <div
-      class="flex-item text-center blog__border blog__border-right blog__border-bottom border-md-0"
+      class="flex-item flex-column align-center text-center blog__border blog__border-right blog__border-bottom border-md-0 all-blog-item"
     >
-      <h1 style="color: black">Tutti i Blog</h1>
+      <h3 style="color: black" class="blog__main-title">Tutti i Blog</h3>
+      <IconsRightArrow />
     </div>
   </div>
 </template>
@@ -53,11 +55,27 @@ console.log(newsletter);
   border-right-width: 0;
 }
 
-h1 {
-  padding: 24px;
+.blog__main-title {
+  padding: 1.5rem;
   color: red;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.last-blog {
+  display: none;
+
+  @include for-desktop() {
+    display: inline;
+  }
+}
+
+.all-blog-item {
+  display: flex;
+
+  @include for-desktop() {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 900px) {

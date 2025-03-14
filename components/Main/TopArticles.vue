@@ -19,10 +19,8 @@ const props = defineProps({
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
-}
 
-@media screen and (min-width: 769px) {
-  .grid-container {
+  @include for-tablet() {
     grid-template-columns: repeat(12, 1fr);
   }
 }

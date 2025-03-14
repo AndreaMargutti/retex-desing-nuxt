@@ -1,17 +1,20 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   author: { type: Object, required: true },
   date: { type: String, required: false },
+  id: { type: Number, required: true },
 });
 </script>
 
 <template>
-  <div class="flex align-items-center gap-12" style="margin-top: 10px">
+  <div class="d-flex align-center gap-12" style="margin-top: 10px">
     <div class="profile-pic">
-      <img :src="author.profile_pic" alt="" />
+      <img :src="author.profile_pic" alt="profile_img" />
     </div>
     <div class="profile-info">
-      <h6 class="profile-info__name">{{ author.name }}</h6>
+      <h6 class="profile-info__name">
+        {{ author.name }}
+      </h6>
       <p class="profile-info__date">{{ date }}</p>
     </div>
   </div>
@@ -19,8 +22,14 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .profile-pic {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
+
+  @include for-tablet() {
+    width: 3rem;
+    height: 3rem;
+  }
+
   img {
     border-radius: 20px;
   }
@@ -29,21 +38,18 @@ const props = defineProps({
 .profile-info {
   color: black;
 
-  .profile-info__name {
-    font-weight: 400;
-    font-size: 14px;
+  @include for-tablet() {
+    color: white;
   }
 
-  .profile-info__date {
+  &__name {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 0.9rem;
   }
-}
 
-@media screen and (min-width: 769px) {
-  .profile-pic {
-    width: 48px;
-    height: 48px;
+  &__date {
+    font-weight: 400;
+    font-size: 0.6rem;
   }
 }
 </style>

@@ -1,28 +1,27 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps(["title", "color"]);
 </script>
 
 <template>
-  <button :style="{ backgroundColor: color }" class="white-bg">
+  <button class="filter-button">
     {{ title.toUpperCase() }}
   </button>
 </template>
 
 <style scoped lang="scss">
-button {
-  padding: 12px 16px;
+.filter-button {
+  padding: 0.7rem 1rem;
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 0.25px;
   box-shadow: -2px 2px black;
   // testo
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 10px;
-}
+  font-size: 0.6rem;
+  background-color: white;
 
-@media screen and (max-width: 1099px) {
-  .white-bg {
-    background-color: white !important;
+  @include for-tablet() {
+    background-color: v-bind("props.color");
   }
 }
 </style>

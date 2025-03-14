@@ -1,92 +1,72 @@
-/* margin */
-
-.mt-1 {
-    margin-top: 30px;
-}
+/**
+* TODO: 
+*    - inconsistenza sui nomi delle classi;
+*    - perché hai usato i `px`? Che differenza c'è tra `px`, `rem` e `em`? E cosa ci consiglieresti di utilizzare
+*   - `#f4f4f4` quante volte lo ripeti? Che alternative abbiamo all'utilizzo del hex?
+*/
 
 /* display */
 
 .d-none {
-    display: none;
+  display: none;
+}
+
+.d-flex {
+  display: flex;
 }
 
 /* flex */
 
-.flex {
-    display: flex;
-}
-
-.flex-basis-50 {
-    flex-basis: 50%;
-}
-
 .flex-grow {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .justify-end {
-    justify-content: end;
+  justify-content: end;
 }
 
-.align-items-center {
-    align-items: center;
+.align-center {
+  align-items: center;
 }
 
 .gap-12 {
-    gap: 12px;
+  gap: 12px;
 }
 
 .gap-16 {
-    gap: 16px;
+  gap: 16px;
 }
 
 // text
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* padding */
 
-.py-1 {
-    padding: 5px;
-}
-
-.ps-1 {
-    padding-left: 5px;
-}
-
 .padding-page {
-    padding: 16px 40px;
+  @media screen and (min-width: 768px) {
+    padding: 0 3rem;
+  }
 }
 
 /* bordi */
 
-.border {
-    border: solid black;
-    border-width: 1px;
+.border-solid-black {
+  border-style: solid black;
 }
 
-.border-bottom {
-    border-width: 0 0 1px 0;
-}
-
-.border--right--0 {
-    border-right: 0;
-}
-
-.border--bottom-0 {
-    border-bottom: 0;
-}
+// background
 
 .background-gray {
-    background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }

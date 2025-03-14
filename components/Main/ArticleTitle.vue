@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   title: { type: String, required: true },
   id: { type: Number, required: true },
@@ -6,22 +6,20 @@ const props = defineProps({
 </script>
 
 <template>
-  <h1 :class="{ 'color-white': id === 1 }">{{ title }}</h1>
+  <h2 :class="{ 'color-white': id === 1 }" class="title">{{ title }}</h2>
 </template>
 
 <style scoped lang="scss">
-h1 {
+.title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2rem;
+
+  @include for-tablet() {
+    font-size: 2.5rem;
+  }
 }
 
 .color-white {
   color: white;
-}
-
-@media screen and (min-width: 769px) {
-  h1 {
-    font-size: 40px;
-  }
 }
 </style>

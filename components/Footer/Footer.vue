@@ -1,26 +1,20 @@
+<script setup lang="ts">
+const fooInfo = [
+  { id: 1, label: "Il Gruppo" },
+  { id: 2, label: "Note Legali" },
+  { id: 3, label: "Chi Siamo" },
+  { id: 4, label: "Condizioni d'Uso" },
+  { id: 5, label: "Privacy" },
+  { id: 6, label: "Scrivici" },
+  { id: 7, label: "Pubblicità" },
+];
+</script>
+
 <template>
   <div class="footer">
     <ul class="footer--list">
-      <li class="footer--list--item">
-        <h5>Il gruppo</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Note Legali</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Chi Siamo</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Condizioni d'Uso</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Privacy</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Scrivici</h5>
-      </li>
-      <li class="footer--list--item">
-        <h5>Pubblicità</h5>
+      <li v-for="{ id, label } in fooInfo" :key="id" class="footer--list--item">
+        <h5>{{ label }}</h5>
       </li>
     </ul>
 
@@ -33,22 +27,22 @@
 <style scoped lang="scss">
 .footer {
   background-color: #f4f4f4;
-  padding: 24px 16px;
+  padding: 2rem 1rem;
 }
 
 .footer--list {
   color: black;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
 
   .footer--list--item {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 }
 
 .footer-info {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 // responsive desktop
@@ -63,16 +57,16 @@
   }
 
   .footer {
-    padding: 48px 40px;
+    padding: 3rem 2.5rem;
   }
 
   .footer--list {
-    gap: 24px;
+    gap: 2rem;
   }
 
   .footer--list--item {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 }
 </style>
