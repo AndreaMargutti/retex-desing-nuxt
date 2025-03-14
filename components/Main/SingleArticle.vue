@@ -70,6 +70,10 @@ const props = defineProps({
 
 .padding-top-144 {
   padding-top: 144px;
+
+  @include for-tablet() {
+    padding-top: 256px;
+  }
 }
 
 .padding-top-2 {
