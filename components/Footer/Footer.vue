@@ -57,16 +57,16 @@ const fooInfo = [
   }
 
   .footer {
-    padding: 48px 40px;
+    padding: 3rem 2.5rem;
   }
 
   .footer--list {
-    gap: 24px;
+    gap: 2rem;
   }
 
   .footer--list--item {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 }
 </style>

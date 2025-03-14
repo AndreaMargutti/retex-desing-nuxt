@@ -26,19 +26,19 @@ const props = defineProps({
   }
 
   &__item {
-    padding: 65px 0;
+    padding: 4rem 0;
     flex-basis: calc(100% / 6);
     align-content: stretch;
     border-bottom: 1px solid black;
 
-    @include for-desktop() {
+    @include for-tablet() {
       border-bottom: 0;
       border-right: 1px solid black;
     }
   }
 
   &__text {
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
   }
 }

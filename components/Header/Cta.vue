@@ -66,20 +66,20 @@ const headerTopLink = [
 }
 
 .topHeader__link--padding {
-  padding: 8px 8px;
+  padding: 0.5rem 0.5rem;
 
   @include for-tablet() {
-    padding: 16px 0;
+    padding: 1rem 0;
 
     &__first-item {
-      padding-right: 24px;
+      padding-right: 2rem;
     }
   }
 }
 
 .topHeader--icon-gap {
   @include for-tablet() {
-    gap: 8px;
+    gap: 0.5rem;
   }
 }
 

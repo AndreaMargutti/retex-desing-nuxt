@@ -91,13 +91,13 @@ const info = [
   }
 
   &__description {
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 
   &__title {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3.2rem;
   }
 }
 

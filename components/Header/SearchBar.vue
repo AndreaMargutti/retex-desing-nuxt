@@ -23,10 +23,10 @@ const { status, changeStatus } = useHamburger();
   border: 1px solid black;
   border-top: 0;
   border-right: 0;
-  padding: 16px;
+  padding: 1rem;
 
   @include for-tablet() {
-    padding: 40px;
+    padding: 2.5rem;
     border-top: 1px solid;
   }
 }

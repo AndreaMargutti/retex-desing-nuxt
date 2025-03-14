@@ -47,8 +47,8 @@ const toggleBtns = () => {
 }
 
 .topFilter--padding {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .filter--bottom-border {
@@ -57,12 +57,12 @@ const toggleBtns = () => {
 
 .filter--title {
   font-family: "Raleway";
-  font-size: 28px;
+  font-size: 2.3rem;
   font-weight: 700;
 
   &__big {
     font-weight: 700;
-    font-size: 51px;
+    font-size: 3.2rem;
   }
 }
 
@@ -75,18 +75,18 @@ const toggleBtns = () => {
 }
 
 .filter--item {
-  padding: 8px;
+  padding: 0.5rem;
 }
 
 .filter--title-big__padding-bottom {
-  padding-bottom: 12px;
+  padding-bottom: 0.8rem;
 }
 
 .padding-filter {
-  padding: 24px 16px;
+  padding: 2rem 1rem;
 
   @include for-desktop() {
-    padding: 64px 40px;
+    padding: 4rem 2.5rem;
   }
 }
 
@@ -101,6 +101,6 @@ const toggleBtns = () => {
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.6rem;
 }
 </style>

@@ -33,7 +33,7 @@ const { status } = useHamburger();
 }
 
 .topHeader--padding-top {
-  padding-top: 44px;
+  padding-top: 2.8rem;
 
   @include for-tablet() {
     padding-top: 0;
