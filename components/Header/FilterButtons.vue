@@ -3,13 +3,13 @@ const props = defineProps(["title", "color"]);
 </script>
 
 <template>
-  <button :style="{ backgroundColor: color }" class="white-bg">
+  <button class="filter-button">
     {{ title.toUpperCase() }}
   </button>
 </template>
 
 <style scoped lang="scss">
-button {
+.filter-button {
   padding: 12px 16px;
   border: 1px solid black;
   border-radius: 4px;
@@ -18,11 +18,10 @@ button {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 10px;
-}
+  background-color: white;
 
-@media screen and (max-width: 1099px) {
-  .white-bg {
-    background-color: white !important;
+  @include for-tablet() {
+    background-color: v-bind("props.color");
   }
 }
 </style>
