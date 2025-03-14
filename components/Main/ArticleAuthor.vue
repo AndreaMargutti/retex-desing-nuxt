@@ -11,7 +11,7 @@ const props = defineProps({
     <div class="profile-pic">
       <img :src="author.profile_pic" alt="" />
     </div>
-    <div class="profile-info" :style="id === 1 ? { color: 'white ' } : ''">
+    <div class="profile-info">
       <h6 class="profile-info__name">
         {{ author.name }}
       </h6>
@@ -37,13 +37,17 @@ const props = defineProps({
 
 .profile-info {
   color: black;
+  @include for-tablet() {
+    // not used because there are no images
+    // color: white;
+  }
 
-  .profile-info__name {
+  &__name {
     font-weight: 400;
     font-size: 0.9rem;
   }
 
-  .profile-info__date {
+  &__date {
     font-weight: 400;
     font-size: 0.6rem;
   }
