@@ -56,10 +56,10 @@ console.log(newsletter);
 }
 
 .blog__main-title {
-  padding: 24px;
+  padding: 1.5rem;
   color: red;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .last-blog {
