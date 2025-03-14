@@ -1,6 +1,6 @@
 <template>
-  <div class="container d-flex gap-12">
-    <span class="container-icon">
+  <div class="banner d-flex gap-12">
+    <span class="banner__icon">
       <svg
         width="34"
         height="27"
@@ -16,53 +16,52 @@
       </svg>
     </span>
     <div>
-      <h1>Essere troppo seri non è cosa molto seria</h1>
-      <h5>[Detto Africano]</h5>
+      <h3 class="banner__title">Essere troppo seri non è cosa molto seria</h3>
+      <h5 class="banner__subheading">[Detto Africano]</h5>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.container {
+.banner {
   padding: 32px 16px;
   background-color: #f4f4f4;
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-  }
 
-  h5 {
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .container-icon {
-    top: 30px;
-    left: 30px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .container {
+  @include for-tablet() {
     padding: 84px 40px;
     background-image: url("https://s3-alpha-sig.figma.com/img/93be/d634/e8c8234062df3f792a0d9928926e5f47?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KOzRsTCWt4so2lUjrPgNPgRBaH7qupJ0vCzjFDN3hmUgiF9DQRQD2eSyvJnMhL5eM2eDYk97ztdY~cEnyj6w5vS32-O9ehkekALra7jrm254iTiRywRegJrQg~7zsD2ZnDU5yNpkbpNKJbXdCv4lIgrFLEbbBS7c1T3smeCTc57ElBne5~ruXdqDQEgorn7sB6UcqPaJaT2aoBFmLva8AjPiCm5V31FENFVLeM1uzey70t3xvWHkGsi~6RUh2Z~C-8nj9leaau3640eXpLbPwSi0oV-5xCKdNqY-kfQiYA5tPhFBDZ1At9s3t-PgqD2o3UgBwVo~vONtsz9vEnVxyA__");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
 
-    h1 {
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include for-tablet() {
       color: white;
       font-weight: 700;
       font-size: 40px;
     }
+  }
 
-    h5 {
+  &__subheading {
+    font-size: 14px;
+    font-weight: 600;
+
+    @include for-tablet() {
       color: white;
       font-weight: 600;
       font-size: 16px;
     }
+  }
 
-    .container-icon {
+  &__icon {
+    top: 30px;
+    left: 30px;
+
+    @include for-tablet() {
       color: #ffffff1a;
       width: 54px;
       height: 43px;
