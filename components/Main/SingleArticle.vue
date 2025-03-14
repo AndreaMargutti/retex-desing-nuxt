@@ -18,14 +18,12 @@ const props = defineProps({
     }"
     class="grid-item"
   >
-    <div>
-      <MainArticleBackgroundImage
-        v-show="index === 2"
-        :img="singleArticle.imgUrl"
-        class="article-img md-none-img"
-      />
-      <!-- inserisco componenti icone -->
-    </div>
+    <MainArticleBackgroundImage
+      v-show="index === 2"
+      :img="singleArticle.imgUrl"
+      class="article-img md-none-img"
+    />
+    <!-- inserisco componenti icone -->
     <div
       :class="{
         'padding-top-144': index === 1,

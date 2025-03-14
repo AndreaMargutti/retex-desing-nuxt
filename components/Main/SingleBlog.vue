@@ -16,24 +16,24 @@ const props = defineProps({
 
 <style scoped lang="scss">
 figure {
-  padding: 24px;
+  padding: 2rem;
 
   img {
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
     margin: 0 auto;
-    margin-bottom: 24px;
-    border-radius: 30px;
+    margin-bottom: 2rem;
+    border-radius: 1.9rem;
   }
 
   h3 {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   h4 {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.8rem;
   }
 }
 </style>
