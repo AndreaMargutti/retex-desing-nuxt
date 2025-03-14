@@ -3,7 +3,7 @@
     <div>
       <h3 class="banner__title">Il tuo supporto è fondamentale</h3>
     </div>
-    <div class="d-flex gap-4">
+    <div class="d-flex gap-025">
       <h5 class="banner__cta">Dai il tuo contributo</h5>
       <IconsRightArrow />
     </div>
@@ -42,7 +42,7 @@
   }
 }
 
-.gap-4 {
+.gap-025 {
   gap: 0.25rem;
 }
 </style>
