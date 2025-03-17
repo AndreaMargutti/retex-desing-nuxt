@@ -9,15 +9,15 @@ const articles = data?.value?.articles ?? [];
 console.log(articles);
 
 const topArticles = articles.toSpliced(4);
-console.log("top", topArticles);
-console.log(articles);
 
 const middleArticles = () => {
   const firstSplice = articles.toSpliced(0, 4);
   return firstSplice.toSpliced(5);
 };
 
-console.log(middleArticles());
+const bottomArticles = () => {
+  return articles.toSpliced(0, 9);
+};
 </script>
 
 <template>
@@ -26,4 +26,5 @@ console.log(middleArticles());
   <MainMiddleArticles :articles="middleArticles()" />
   <MainCitationBanner />
   <MainBlog />
+  <MainBottomArticles :articles="bottomArticles()" />
 </template>
