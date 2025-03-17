@@ -5,12 +5,12 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="grid-container">
+  <div class="grid-container grid-middle">
     <MainSingleArticle
-      v-for="article in articles"
-      :key="article.id"
       :singleArticle="article"
       :index="article.id"
+      v-for="article in articles"
+      :key="article.id"
     />
   </div>
 </template>
@@ -19,10 +19,24 @@ const props = defineProps({
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
-  gap: 1px;
 
   @include for-tablet() {
     grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.grid-middle {
+  & > * {
+    grid-column: span 12;
+    @include for-tablet() {
+      &:nth-child(-n + 4) {
+        grid-column: span 4;
+      }
+
+      &:last-child {
+        grid-column: span 8;
+      }
+    }
   }
 }
 </style>

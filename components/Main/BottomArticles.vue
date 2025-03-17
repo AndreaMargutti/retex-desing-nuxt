@@ -19,10 +19,28 @@ const props = defineProps({
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
-  gap: 1px;
 
   @include for-tablet() {
     grid-template-columns: repeat(12, 1fr);
+  }
+
+  & > * {
+    grid-column: span 12;
+
+    @include for-tablet() {
+      &:nth-child(n + 2):nth-child(-n + 5) {
+        grid-column: span 3;
+      }
+
+      &:nth-child(n + 5) {
+        grid-column: 1 / span 6;
+      }
+
+      &:last-child {
+        grid-column: 7 / span 6;
+        grid-row: 3 / 7;
+      }
+    }
   }
 }
 </style>
