@@ -5,9 +5,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <ul>
-    <li v-for="article in articles" :key="article.id">
-      {{ article.title }}
-    </li>
-  </ul>
+  <div>
+    <MainSingleArticle
+      v-for="article in articles"
+      :key="article.id"
+      :singleArticle="article"
+    />
+  </div>
 </template>

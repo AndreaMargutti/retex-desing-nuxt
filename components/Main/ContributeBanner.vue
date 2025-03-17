@@ -37,7 +37,7 @@
 
   &__cta {
     font-weight: 700;
-    font-size: 0.1rem;
+    font-size: 1rem;
     color: black;
   }
 }
