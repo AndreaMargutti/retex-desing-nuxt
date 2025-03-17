@@ -89,7 +89,7 @@ export default defineEventHandler(async () => {
           label: "Salute",
           color: "#3357FF",
         },
-        imgUlr:
+        imgUrl:
           "https://s3-alpha-sig.figma.com/img/9e80/4ede/387e44379e5e0554b39b5ff23f335d3f?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=c5tKqgPf2VQlSKhr7vjbIqHiBqfyhN-cOyN~vYmBiR9WZCzN~sS4lvXfHdZtSt5GoYcXRC2fBJ5O~wfI2C9tzJ163QNBwJZFjC7Hb4id13kA0MqXa3qr4chG2C2QKq-9iCqSxLXtZ5T0I-MRhJ0B2k2vy-Frf7GiFwNEh7cPn7MIwqPG3WhHIwPvaaI0e0c7tRsDg6erLzEuFdUCtVzSRMtLAdAMXp6LNLagK-Om7hE6iEm5-3rR3PxeEwuqhk-E0zMO2ukpPUUX64hkRHpyToP~VW2myzC1AT3VBvxB0Dy6FUPmx92Vc4rd8ZWUtbXN1J7oNcYVTS4wgG~YOPJsAw_",
         author: {
           name: "Laura Verdi",
