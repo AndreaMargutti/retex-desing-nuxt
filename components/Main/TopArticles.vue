@@ -7,7 +7,7 @@ const props = defineProps({
 <template>
   <div class="grid-container">
     <MainSingleArticle
-      v-for="(article, index) in articles"
+      v-for="article in articles"
       :key="article.id"
       :singleArticle="article"
       :index="article.id"

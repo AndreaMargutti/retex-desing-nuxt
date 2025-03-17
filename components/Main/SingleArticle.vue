@@ -5,6 +5,7 @@ const props = defineProps({
 });
 
 const backgroundImage = `url(${props.singleArticle.imgUrl})`;
+const author = props.singleArticle.author.name;
 </script>
 
 <template>
@@ -21,13 +22,14 @@ const backgroundImage = `url(${props.singleArticle.imgUrl})`;
     class="article"
   >
     <div
-      :class="{
-        'padding-top-144': index === 1,
-        'padding-top-2': index === 2,
-        'padding-top-484': index === 2,
-        'padding-top-140': index === 3,
-        'padding-top-60': index === 4,
-      }"
+      :class="[
+        { 'padding-top-144': index === 1 },
+        { 'padding-top-2': index === 2 },
+        { 'padding-top-484': index === 2 },
+        { 'padding-top-140': index === 3 },
+        { 'padding-top-60': index === 4 },
+        { 'editorial-article': author === 'Redazione' },
+      ]"
       class="articles-info"
     >
       <NuxtImg
@@ -47,10 +49,12 @@ const backgroundImage = `url(${props.singleArticle.imgUrl})`;
 
 <style scoped lang="scss">
 .article {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   @include for-tablet() {
     background-image: v-bind(backgroundImage);
-    background-size: cover;
-    background-position: center;
   }
 }
 
@@ -89,6 +93,11 @@ const backgroundImage = `url(${props.singleArticle.imgUrl})`;
   @include for-tablet() {
     display: none;
   }
+}
+
+.editorial-article {
+  background-color: #e63036;
+  color: white;
 }
 
 @media screen and (min-width: 769px) {

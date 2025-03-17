@@ -74,10 +74,11 @@ export default defineEventHandler(async () => {
           label: "Ambiente",
           color: "#33FF57",
         },
-        imgUrl: "https://via.placeholder.com/600x400.png?text=News+Image+3",
+        imgUrl: "",
         author: {
-          name: "Giovanni Bianchi",
-          profile_pic: "https://via.placeholder.com/150.png?text=Author+3",
+          name: "Redazione",
+          profile_pic:
+            "https://s3-alpha-sig.figma.com/img/f907/3372/70669a9c146f3e96e80295db292b29f4?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VjaakvnSdWO-AKLhLVmNOz4AfGLu5e5PXV7iJ5YJ~mkssO0jQcr6GSEx7jsOq9ZABulNAWXXdcTlrZhkVKpcIGg2mpUMEyOh4G0mXMqVH8T95buUyzErIL8N8sPOhGVj-4HL2LKaIxvVnIpESJWiDU5EDGlluh7t5UMifMQ5CZmf3ODrO3ra-BISyRpAUKDtA~foa3nLzciPWOMTVT4gWi3y95eJJW0YJJR~zZ1S4ti6Kv0-dQC6hQTIUL0gluEU5A4J3MPDIa71GI2kNypYL8-4AwMYxDujykm1K1dxkFzC2lTFsSgww5~32l9proOJXxEsL5MZnVGcGZHBrf-Tqw__",
         },
         date: "5 marzo 2023",
       },
@@ -88,10 +89,12 @@ export default defineEventHandler(async () => {
           label: "Salute",
           color: "#3357FF",
         },
-        imgUrl: "https://via.placeholder.com/600x400.png?text=News+Image+4",
+        imgUlr:
+          "https://s3-alpha-sig.figma.com/img/9e80/4ede/387e44379e5e0554b39b5ff23f335d3f?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=c5tKqgPf2VQlSKhr7vjbIqHiBqfyhN-cOyN~vYmBiR9WZCzN~sS4lvXfHdZtSt5GoYcXRC2fBJ5O~wfI2C9tzJ163QNBwJZFjC7Hb4id13kA0MqXa3qr4chG2C2QKq-9iCqSxLXtZ5T0I-MRhJ0B2k2vy-Frf7GiFwNEh7cPn7MIwqPG3WhHIwPvaaI0e0c7tRsDg6erLzEuFdUCtVzSRMtLAdAMXp6LNLagK-Om7hE6iEm5-3rR3PxeEwuqhk-E0zMO2ukpPUUX64hkRHpyToP~VW2myzC1AT3VBvxB0Dy6FUPmx92Vc4rd8ZWUtbXN1J7oNcYVTS4wgG~YOPJsAw_",
         author: {
           name: "Laura Verdi",
-          profile_pic: "https://via.placeholder.com/150.png?text=Author+4",
+          profile_pic:
+            "https://s3-alpha-sig.figma.com/img/c125/c32b/e27320b1f5ccfec9e81deb42d4223500?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=lfwFWHJMGspYdJRiiMcmhtlN7lkMKQaxM~e-mOcdspvmTtitg6PMvxDMDHEArq9qbojyItoAYmBFWucc3uXxTfM2Hdl2W6pY5K96BaBM2PDJOKWgLzNkHIZbPGPHn332rAe5LvNEOgnZYTyHDKBR9kf~c60tEakeybRQAp1YseLC9W5LPO7SRkeE4nj6elTX15TrkTUoPUmaA1BGifBxXpk6n~3k6VM4oIrVJgnFKO-LR3znwi9Yu~-Bf2c6qRN~akvVy68AQpZPosiMXYKkn8E-L~dahA6xgy3c9prny6v1sXd1tIfb9LmZ4KqYK7MHxwWh0HpXKj9kwoOmUDzQAg__",
         },
         date: "20 aprile 2023",
       },
@@ -102,10 +105,12 @@ export default defineEventHandler(async () => {
           label: "Economia",
           color: "#FF33A1",
         },
-        imgUrl: "https://via.placeholder.com/600x400.png?text=News+Image+5",
+        imgUrl:
+          "https://s3-alpha-sig.figma.com/img/9e80/4ede/387e44379e5e0554b39b5ff23f335d3f?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=c5tKqgPf2VQlSKhr7vjbIqHiBqfyhN-cOyN~vYmBiR9WZCzN~sS4lvXfHdZtSt5GoYcXRC2fBJ5O~wfI2C9tzJ163QNBwJZFjC7Hb4id13kA0MqXa3qr4chG2C2QKq-9iCqSxLXtZ5T0I-MRhJ0B2k2vy-Frf7GiFwNEh7cPn7MIwqPG3WhHIwPvaaI0e0c7tRsDg6erLzEuFdUCtVzSRMtLAdAMXp6LNLagK-Om7hE6iEm5-3rR3PxeEwuqhk-E0zMO2ukpPUUX64hkRHpyToP~VW2myzC1AT3VBvxB0Dy6FUPmx92Vc4rd8ZWUtbXN1J7oNcYVTS4wgG~YOPJsAw_",
         author: {
           name: "Luca Neri",
-          profile_pic: "https://via.placeholder.com/150.png?text=Author+5",
+          profile_pic:
+            "https://s3-alpha-sig.figma.com/img/c951/38d5/b1333cb56a996d5407641c9ababbd42f?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=E~5Uw0m7I5cXwAx1Q81fm-QNLW1B9PNtRNq~QsT6FkFybQ-Vn8pvITGnrEPxzKG0pYD9qhRCtT7WOGWBCmUNjOrVpkc4C-MqJQk33nSJpwbaGc8~h9OFGJpz~OiVlWTyBvD8mepeuE1XSGhNyuLSYaPZ5Qf9oMt6zKRDQFSdRCwyJgkIVOuQEa2Tn6XlH~UiOcH7wO6DB2zoyQo0C-JeDK-f2hDEpk9T-gWPSnGVDssWvQw1R609EAQ4-NcLCNnXdyEGZENh0bPWaodoGe1-G4GZ4Imi9pyIh8Ngurk8I-P8D04WYkhADwew01I5FmCZU6dxk1zZ5qvtzsS1Cbjv7w__",
         },
         date: "15 maggio 2023",
       },
@@ -116,10 +121,12 @@ export default defineEventHandler(async () => {
           label: "Cultura",
           color: "#FFA833",
         },
-        imgUrl: "https://via.placeholder.com/600x400.png?text=News+Image+6",
+        imgUrl:
+          "https://s3-alpha-sig.figma.com/img/145a/abb5/dd3e9b01ec8fa348b61f1f5677f898ed?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=DeLPneHiYV~F~8oVP39Qmu5lB1UqJSqZGZKPUsRnw8jyd8ixAXrEIjxFnlj1P9qJBzDcy8Bj4o2vb76-zqLsvv9SMZLmTFxdSKb9gEzWE5dTkS~yGKT6U6Rrim39~2jcEKuBJcgZxcqetncKLVhT28Ips7DFrOgwW-6BAqWS9Hnv91VMo5g9~-1821v6r7TO1MDyergDUP7FYo3QrO7luIystL8kh35ZZUhHB7s4WPMxLhVJRK~AbT5J7jj8aQvgv6tsCGSJGZSsLowCvEvsLo64SpRceWHb1Ljr6gmgPWRANt4gERPDp2SDUqmrwWq5sOMkDHz40GaJUgF3KGEMmw__",
         author: {
           name: "Sofia Gialli",
-          profile_pic: "https://via.placeholder.com/150.png?text=Author+6",
+          profile_pic:
+            "https://s3-alpha-sig.figma.com/img/9c57/a7d8/e162b18ae8d0a12c5f4e32f54d60c0b8?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Xom7G828jp7ApTg4PKpeh2lXi4puI1jB-mOZZE4sVSA75ApyjE9B~a7adcw12QLS9CJjrkvm9IapaEqSWpDwWzzSWTHfftBsoY4K~Mge7RmoEwDqtJUs4DaWrBoty07hvMtd0MIYD2DvDXMUa~mAIrLvoWl~duXYQde415FquLMT74gzKcoZ3J9m2r7EGJfDc4McNycrf7ADPqqk9IDP4r34nk-7i7c7ofZQG4eUa-VtNEjzYlooOkrE2v4gXGFgNslirdl2bDhn-WXOsvxwXgAo4-PqUoy-Et~vHYXw6ix-vj-jYR~CMpFykiFOANmtomdNuUsbWyE4tUBe~cHhOA__",
         },
         date: "10 giugno 2023",
       },
@@ -130,10 +137,12 @@ export default defineEventHandler(async () => {
           label: "Spazio",
           color: "#33FFA8",
         },
-        imgUrl: "https://via.placeholder.com/600x400.png?text=News+Image+7",
+        imgUrl:
+          "https://s3-alpha-sig.figma.com/img/7aca/5686/f21f938a0b40db341f1e0c17dc4c52cb?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=X2XtIrebG72xSIr3Th5xmp9YFJqdbWvtW17zxJ1UmBa00W7zzyu8ce-EgAEkCJ9aZnJyG8h1RJn6ug0GjSlcrpaD8eZ8mNGYHQeiT8km2cvEa4S3lun~Iu676upr8ZGZga6XtdBoV7N9-JMLXhiBL-Y0Y6EEg3XYX83K77Pye2c1J3zb8d6uODVTFgjChsgL59IQEtbby~cVaKwpGlNp54CUazCdFsjZxLjuV1f0IuXpP0zQPs0LWoAj5yNSsjYzECUR8vySHlGapZApztYTdc4j~fdz9rJ6pJrvLvg6afRHcBg-3nRDfQkXf1ZWQtuAmvJaGewhvpHy4nwNBXC6DQ__",
         author: {
           name: "Marco Blu",
-          profile_pic: "https://via.placeholder.com/150.png?text=Author+7",
+          profile_pic:
+            "https://s3-alpha-sig.figma.com/img/8414/7ee5/e42f4c1b3ecdebcbed1f14bb9f1c01e0?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=fR5fYD7CBWWr8rQUDtHs3DEBVWoLTax9Sd8z56pn2nWwZDqRoPRwE44QjrpNlLbkfw72mDb5mABp2Z6uUgWMv2~Ne4lOGcasOrfKqRq3jdRbMAq1wzciu7ickIcg3dinl88bHNtCuXhyTadI0I581zZUg5D6qWbX1gw6wmkLlWcV00IwtGUfygSene6jEaFNGaiNCgIIBq3ToODPte7kYeVR9xXbIbPS8BkAh5big3UpjmWESSOzJ2LmuYGWDuAOVrkAU6qXGhABPsI8lDhCSR~kpB-3oIzvSiecKYr4x9iZlszFydzHU4Y7DCFrd46g~67VhoK7HZfkhThwxAYmGQ__",
         },
         date: "25 luglio 2023",
       },
