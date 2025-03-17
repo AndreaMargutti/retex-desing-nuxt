@@ -84,13 +84,14 @@ export default defineEventHandler(async () => {
       },
       {
         id: 6,
-        title: "La nuova era della medicina personalizzata",
+        title:
+          "Storie fra ragazzi permeate di violenza. A Napoli 12enne sfregiata da 17enne",
         tag: {
-          label: "Salute",
+          label: "Adolescenti",
           color: "#3357FF",
         },
         imgUrl:
-          "https://s3-alpha-sig.figma.com/img/9e80/4ede/387e44379e5e0554b39b5ff23f335d3f?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=c5tKqgPf2VQlSKhr7vjbIqHiBqfyhN-cOyN~vYmBiR9WZCzN~sS4lvXfHdZtSt5GoYcXRC2fBJ5O~wfI2C9tzJ163QNBwJZFjC7Hb4id13kA0MqXa3qr4chG2C2QKq-9iCqSxLXtZ5T0I-MRhJ0B2k2vy-Frf7GiFwNEh7cPn7MIwqPG3WhHIwPvaaI0e0c7tRsDg6erLzEuFdUCtVzSRMtLAdAMXp6LNLagK-Om7hE6iEm5-3rR3PxeEwuqhk-E0zMO2ukpPUUX64hkRHpyToP~VW2myzC1AT3VBvxB0Dy6FUPmx92Vc4rd8ZWUtbXN1J7oNcYVTS4wgG~YOPJsAw_",
+          "https://s3-alpha-sig.figma.com/img/1034/7202/694ab24ec3d3be255190e79672905561?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Ahi4D7fLePv5YaBYfowsmQkAYX0gdRmd7JAe8GKmzsQvHOJqJSEveU9uwWfJ3Et2-Ktl-xlGecUyu20~KXGd5p-Hrtz322lCGXDudyyk1msKGF56NKodnHOKn46gB6qiMsKwH6UdN5Ua4lk-2R~4X-WxHFfofsrfcc42oWt4gxe065xbHNaDYMzCmXxT12CSm1HaIvC0oA0vbffPmkNSms7JtQJTp6UFmJGn0dvDKkTxb6K9Vp5Xef5npi0UQyi4eSbUIFyETGAhJ1Nvu4FcWr1b8CUvAwopw6meiScrwBDHN3nVshiHwUBZwtR4vM9r6HtQzm7lIVdXfxBCjrN33g__",
         author: {
           name: "Laura Verdi",
           profile_pic:
