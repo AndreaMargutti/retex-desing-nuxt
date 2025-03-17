@@ -78,9 +78,11 @@ const author = props.singleArticle.author.name;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 1px solid black;
 
   @include for-tablet() {
     background-image: v-bind(backgroundImage);
+    border-bottom: 0;
   }
 }
 
