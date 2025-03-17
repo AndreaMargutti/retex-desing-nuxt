@@ -16,12 +16,22 @@ const author = props.singleArticle.author.name;
         : { 'background-color': white },
     ]"
     :class="[
-      { 'article__full-width': index === 1 },
+      { 'article__full-width': index === 1 || index === 10 },
       {
         'article__three-col':
           index === 5 || index === 6 || index === 7 || index === 8,
       },
+      {
+        'article__four-col':
+          index === 11 || index === 12 || index === 13 || index === 14,
+      },
       { 'article__two-col': index === 9 },
+      {
+        'article__half-col':
+          index === 15 || index === 16 || index === 17 || index === 18,
+      },
+      { 'article__half-col__last': index === 19 },
+      { 'article__full-row': index === 19 },
       { 'article__three-col': index === 7 },
       { 'grid-item-8': index === 2 },
       { 'grid-item-5': index === 3 || index === 4 },
@@ -44,14 +54,20 @@ const author = props.singleArticle.author.name;
         :class="[
           index === 2 ? 'mobile-img' : 'd-none',
           index === 9 ? 'mobile-img' : 'd-none',
+          index === 10 ? 'mobile-img' : 'd-none',
         ]"
       />
       <MainArticleTag :tag="singleArticle.tag" />
-      <MainArticleTitle :id="props.index" :title="singleArticle.title" />
+      <MainArticleTitle
+        :id="props.index"
+        :title="singleArticle.title"
+        :img="singleArticle.imgUrl"
+      />
       <MainArticleAuthor
         :id="props.index"
         :author="singleArticle.author"
         :date="singleArticle.date"
+        :img="singleArticle.imgUrl"
       />
     </div>
   </div>
@@ -123,6 +139,22 @@ const author = props.singleArticle.author.name;
 
     &__two-col {
       grid-column: span 8;
+    }
+
+    &__four-col {
+      grid-column: span 3;
+    }
+
+    &__half-col {
+      grid-column: span 6;
+
+      &__last {
+        grid-column: 7 / span 6;
+      }
+    }
+
+    &__full-row {
+      grid-row: 3 / span 4;
     }
   }
 

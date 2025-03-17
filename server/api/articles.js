@@ -74,7 +74,7 @@ export default defineEventHandler(async () => {
           label: "Ambiente",
           color: "#33FF57",
         },
-        imgUrl: "",
+        imgUrl: "/",
         author: {
           name: "Redazione",
           profile_pic:
@@ -200,7 +200,7 @@ export default defineEventHandler(async () => {
           label: "Tecnologia",
           color: "#00FF00",
         },
-        imgUrl: "",
+        imgUrl: "/",
         author: {
           name: "Redazione",
           profile_pic:

@@ -2,11 +2,17 @@
 const props = defineProps({
   title: { type: String, required: true },
   id: { type: Number, required: true },
+  img: { type: String, required: false },
 });
 </script>
 
 <template>
-  <h2 :class="{ 'color-white': id === 1 }" class="title">{{ title }}</h2>
+  <h2
+    :class="[{ 'color-white': id === 1 }, { 'no-image': img === '' }]"
+    class="title"
+  >
+    {{ title }}
+  </h2>
 </template>
 
 <style scoped lang="scss">
@@ -18,6 +24,10 @@ const props = defineProps({
     font-size: 2.5rem;
     color: white;
   }
+}
+
+.no-image {
+  color: black;
 }
 
 .color-white {

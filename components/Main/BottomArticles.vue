@@ -15,4 +15,13 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+
+  @include for-tablet() {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+</style>
