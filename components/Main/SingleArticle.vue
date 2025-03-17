@@ -15,10 +15,17 @@ const author = props.singleArticle.author.name;
         ? { 'background-image': 'url(' + singleArticle.imgUrl + ')' }
         : { 'background-color': white },
     ]"
-    :class="{
-      'grid-item-8': index === 2,
-      'grid-item-5': index === 3 || index === 4,
-    }"
+    :class="[
+      { 'article__full-width': index === 1 },
+      {
+        'article__three-col':
+          index === 5 || index === 6 || index === 7 || index === 8,
+      },
+      { 'article__two-col': index === 9 },
+      { 'article__three-col': index === 7 },
+      { 'grid-item-8': index === 2 },
+      { 'grid-item-5': index === 3 || index === 4 },
+    ]"
     class="article"
   >
     <div
@@ -34,7 +41,10 @@ const author = props.singleArticle.author.name;
     >
       <NuxtImg
         :src="singleArticle.imgUrl"
-        :class="[index === 2 ? 'mobile-img' : 'd-none']"
+        :class="[
+          index === 2 ? 'mobile-img' : 'd-none',
+          index === 9 ? 'mobile-img' : 'd-none',
+        ]"
       />
       <MainArticleTag :tag="singleArticle.tag" />
       <MainArticleTitle :id="props.index" :title="singleArticle.title" />
@@ -87,6 +97,7 @@ const author = props.singleArticle.author.name;
 }
 
 .mobile-img {
+  width: 100%;
   display: block;
   margin-bottom: 1.5rem;
 
@@ -101,8 +112,18 @@ const author = props.singleArticle.author.name;
 }
 
 @media screen and (min-width: 769px) {
-  .article:first-of-type {
-    grid-column: 1 / span 12;
+  .article {
+    &__full-width {
+      grid-column: 1 / span 12;
+    }
+
+    &__three-col {
+      grid-column: span 4;
+    }
+
+    &__two-col {
+      grid-column: span 8;
+    }
   }
 
   .padding-top-250 {
