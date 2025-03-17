@@ -20,12 +20,6 @@ const backgroundImage = `url(${props.singleArticle.imgUrl})`;
     }"
     class="article"
   >
-    <!-- <MainArticleBackgroundImage
-      v-show="index === 2"
-      :img="singleArticle.imgUrl"
-      class="article-img"
-    /> -->
-    <!-- inserisco componenti icone -->
     <div
       :class="{
         'padding-top-144': index === 1,
@@ -36,6 +30,10 @@ const backgroundImage = `url(${props.singleArticle.imgUrl})`;
       }"
       class="articles-info"
     >
+      <NuxtImg
+        :src="singleArticle.imgUrl"
+        :class="[index === 2 ? 'mobile-img' : 'd-none']"
+      />
       <MainArticleTag :tag="singleArticle.tag" />
       <MainArticleTitle :id="props.index" :title="singleArticle.title" />
       <MainArticleAuthor
@@ -49,17 +47,10 @@ const backgroundImage = `url(${props.singleArticle.imgUrl})`;
 
 <style scoped lang="scss">
 .article {
-  background-image: v-bind(backgroundImage);
-  background-size: cover;
-  background-position: center;
-}
-
-.article-img {
-  width: 80%;
-  margin: 1.2rem auto;
-
   @include for-tablet() {
-    display: none;
+    background-image: v-bind(backgroundImage);
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -89,6 +80,15 @@ const backgroundImage = `url(${props.singleArticle.imgUrl})`;
 
 .padding-top-60 {
   padding-top: 60px;
+}
+
+.mobile-img {
+  display: block;
+  margin-bottom: 1.5rem;
+
+  @include for-tablet() {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 769px) {

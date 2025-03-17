@@ -16,6 +16,7 @@ const props = defineProps({
 
   @include for-tablet() {
     font-size: 2.5rem;
+    color: white;
   }
 }
 
