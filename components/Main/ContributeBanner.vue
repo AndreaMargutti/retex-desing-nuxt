@@ -18,6 +18,7 @@
 
   @include for-tablet {
     display: flex;
+    gap: 1rem;
     padding-block: 5rem;
     padding-inline: 2.5rem;
   }
@@ -27,6 +28,7 @@
     font-size: 1.5rem;
     color: black;
     margin-bottom: 0.9rem;
+    white-space: nowrap;
 
     @include for-tablet {
       font-size: 2.5rem;
@@ -38,6 +40,7 @@
     font-weight: 700;
     font-size: 1rem;
     color: black;
+    white-space: nowrap;
   }
 }
 
