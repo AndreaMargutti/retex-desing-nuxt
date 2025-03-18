@@ -33,12 +33,6 @@ const props = defineProps({
   .grid-top {
     grid-column: span 12;
 
-    &:first-child {
-      min-height: 20rem;
-      display: flex;
-      align-items: end;
-    }
-
     @include for-tablet() {
       &:first-child {
         grid-column: span 12;

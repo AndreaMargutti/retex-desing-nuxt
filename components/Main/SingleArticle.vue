@@ -11,21 +11,18 @@ console.log(props.singleArticle);
 
 <template>
   <div
-    :style="[
-      index === 1 ? { 'background-image': `url(${singleArticle.imgUrl})` } : '',
+    :class="[
+      singleArticle.type === 'main-article' ? 'main-article' : '',
+      singleArticle.type === 'media-article' ? 'media-article' : '',
+      singleArticle.type === 'editorial-article' ? 'editorial-article' : '',
     ]"
     class="article"
   >
-    <div
-      :class="[{ 'editorial-article': author === 'Redazione' }]"
-      class="articles-info"
-    >
+    <div class="articles-info">
       <NuxtImg
         :src="singleArticle.imgUrl"
         :class="[
-          index === 2 ? 'mobile-img' : 'd-none',
-          index === 9 ? 'mobile-img' : 'd-none',
-          index === 10 ? 'mobile-img' : 'd-none',
+          singleArticle.type === 'media-article' ? 'mobile-img' : 'd-none',
         ]"
       />
       <MainArticleTag :tag="singleArticle.tag" />
@@ -47,23 +44,44 @@ console.log(props.singleArticle);
 
 <style scoped lang="scss">
 .article {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid black;
-
   @include for-tablet() {
     background-image: v-bind(backgroundImage);
-    border-bottom: 0;
+    background-position: center;
+    background-size: cover;
+
+    min-height: 23.7rem;
+    display: flex;
+    align-items: end;
+  }
+}
+
+.main-article {
+  background-image: v-bind(backgroundImage);
+  background-position: center;
+  background-size: cover;
+  min-height: 20rem;
+  display: flex;
+  align-items: end;
+
+  @include for-tablet() {
+    min-height: 31.5rem;
+
+    & ~ .media-article {
+      justify-content: start;
+      align-items: end;
+    }
+  }
+}
+
+.media-article {
+  @include for-tablet() {
+    align-items: start;
+    justify-content: end;
   }
 }
 
 .articles-info {
   padding: 2rem 1rem;
-
-  @include for-tablet() {
-    min-height: 100%;
-  }
 }
 
 .mobile-img {
