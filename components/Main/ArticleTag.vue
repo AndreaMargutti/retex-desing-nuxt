@@ -17,6 +17,7 @@ const props = defineProps({
   border: 1px solid black;
   border-radius: 4px;
   box-shadow: -2px 2px black;
+  margin-bottom: 1rem;
 
   &__text {
     font-family: "Raleway";

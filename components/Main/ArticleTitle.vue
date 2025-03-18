@@ -2,13 +2,17 @@
 const props = defineProps({
   title: { type: String, required: true },
   id: { type: Number, required: true },
+  type: { type: String, required: true },
   img: { type: String, required: false },
 });
 </script>
 
 <template>
   <h2
-    :class="[{ 'color-white': id === 1 }, { 'no-image': img === '' }]"
+    :class="[
+      type === 'main-article' ? 'main-title' : '',
+      type === 'media-article' ? 'media-title' : '',
+    ]"
     class="title"
   >
     {{ title }}
@@ -18,11 +22,34 @@ const props = defineProps({
 <style scoped lang="scss">
 .title {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: black;
 
   @include for-tablet() {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
     color: white;
+  }
+}
+
+.main-title {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  @include for-tablet() {
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+}
+
+.media-title {
+  font-size: 1.3rem;
+  line-height: 1.5;
+
+  @include for-tablet() {
+    font-size: 2rem;
+    line-height: 1.5;
   }
 }
 

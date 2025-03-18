@@ -3,6 +3,7 @@ export default defineEventHandler(async () => {
     articles: [
       {
         id: 1,
+        type: "main-article",
         title: `Roccella Jonica, la Lampedusa che l'Italia ignora`,
         tag: {
           label: "Migranti",
@@ -19,6 +20,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 2,
+        type: "media-article",
         title:
           "Il collasso dei ghiacciai negli scatti del fotografo ambientale Fabiano Ventura",
         tag: {
@@ -36,6 +38,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 3,
+        type: "default-article",
         title:
           "Gli startupper? Li trovi al bistrot. Così il DumBo incuba relazioni",
         tag: {
@@ -53,6 +56,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 4,
+        type: "default-article",
         title: "Innovazioni tecnologiche nel 2023",
         tag: {
           label: "Tecnologia",
@@ -69,6 +73,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 5,
+        type: "editorial-article",
         title: "Il cambiamento climatico e le sue conseguenze",
         tag: {
           label: "Ambiente",
@@ -84,6 +89,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 6,
+        type: "default-article",
         title:
           "Storie fra ragazzi permeate di violenza. A Napoli 12enne sfregiata da 17enne",
         tag: {
@@ -101,6 +107,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 7,
+        type: "default-article",
         title: "Economia globale: sfide e opportunità",
         tag: {
           label: "Economia",
@@ -117,6 +124,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 8,
+        type: "default-article",
         title: "I segreti della cucina italiana",
         tag: {
           label: "Cultura",
@@ -133,6 +141,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 9,
+        type: "media-article",
         title: "Esplorazioni spaziali: il futuro dell'umanità",
         tag: {
           label: "Spazio",
@@ -149,6 +158,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 10,
+        type: "media-article",
         title: "L'importanza dell'educazione nel mondo moderno",
         tag: {
           label: "Educazione",
@@ -165,6 +175,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 11,
+        type: "default-article",
         title: "Arte contemporanea: tendenze e artisti",
         tag: {
           label: "Arte",
@@ -180,6 +191,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 12,
+        type: "default-article",
         title: "Il ruolo della politica nell'era digitale",
         tag: {
           label: "Politica",
@@ -196,6 +208,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 13,
+        type: "editorial-article",
         title: "Nuovi sviluppi nella tecnologia blockchain",
         tag: {
           label: "Tecnologia",
@@ -211,6 +224,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 14,
+        type: "default-article",
         title: "La sostenibilità nel design urbano",
         tag: {
           label: "Ambiente",
@@ -227,6 +241,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 15,
+        type: "default-article",
         title: "Nuove scoperte nell'archeologia moderna",
         tag: {
           label: "Storia",
@@ -243,6 +258,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 16,
+        type: "default-article",
         title: "L'evoluzione del mercato delle criptovalute",
         tag: {
           label: "Finanza",
@@ -259,6 +275,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 17,
+        type: "default-article",
         title: "Il futuro delle energie rinnovabili",
         tag: {
           label: "Energia",
@@ -275,6 +292,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 18,
+        type: "default-article",
         title: "La rivoluzione dell'intelligenza artificiale",
         tag: {
           label: "AI",
@@ -291,6 +309,7 @@ export default defineEventHandler(async () => {
       },
       {
         id: 19,
+        type: "default-article",
         title: "Cambiamenti nel panorama politico globale",
         tag: {
           label: "Politica",

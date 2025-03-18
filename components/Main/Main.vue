@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { MainArticlesGrid } from "#components";
+
 const config = useRuntimeConfig();
 
 const { data } = await useAsyncData("", () => {
@@ -25,10 +27,10 @@ const bottomArticles = () => {
 </script>
 
 <template>
-  <MainArticlesSection :articles="topArticles" :layout="'top'" />
+  <MainArticlesGrid :articles="topArticles" :layout="'top'" />
   <MainContributeBanner />
-  <MainArticlesSection :articles="middleArticles()" :layout="'middle'" />
+  <MainArticlesGrid :articles="middleArticles()" :layout="'middle'" />
   <MainCitationBanner />
   <MainBlog />
-  <MainArticlesSection :articles="bottomArticles()" :layout="'bottom'" />
+  <MainArticlesGrid :articles="bottomArticles()" :layout="'bottom'" />
 </template>

@@ -6,6 +6,7 @@ const props = defineProps({
 
 const backgroundImage = `url(${props.singleArticle.imgUrl})`;
 const author = props.singleArticle.author.name;
+console.log(props.singleArticle);
 </script>
 
 <template>
@@ -31,6 +32,7 @@ const author = props.singleArticle.author.name;
       <MainArticleTitle
         :id="props.index"
         :title="singleArticle.title"
+        :type="singleArticle.type"
         :img="singleArticle.imgUrl"
       />
       <MainArticleAuthor
