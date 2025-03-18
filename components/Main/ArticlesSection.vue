@@ -74,18 +74,26 @@ const props = defineProps({
 
   // bottom-section
 
-  @include for-tablet() {
-    &:nth-child(n + 2):nth-child(-n + 5) {
-      grid-column: span 3;
-    }
+  .grid-bottom {
+    grid-column: span 12;
 
-    &:nth-child(n + 5) {
-      grid-column: 1 / span 6;
-    }
+    @include for-tablet() {
+      &:first-child {
+        grid-column: span 12;
+      }
 
-    &:last-child {
-      grid-column: 7 / span 6;
-      grid-row: 3 / 7;
+      &:nth-child(n + 2):nth-child(-n + 5) {
+        grid-column: span 3;
+      }
+
+      &:nth-child(n + 6):nth-child(-n + 9) {
+        grid-column: span 6;
+      }
+
+      &:last-child {
+        grid-column: 7 / span 6;
+        grid-row: 3 / 7;
+      }
     }
   }
 }
