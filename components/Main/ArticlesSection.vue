@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const props = defineProps({
-  articles: { type: Array, required: true },
+  articles: { type: Array, require: true },
+  layout: { type: String, required: false },
 });
 </script>
 
@@ -11,6 +12,11 @@ const props = defineProps({
       :key="article.id"
       :singleArticle="article"
       :index="article.id"
+      :class="[
+        { 'grid-top': layout === 'top' },
+        { 'grid-middle': layout === 'middle' },
+        { 'grid-bottom': layout === 'bottom' },
+      ]"
     />
   </div>
 </template>
@@ -24,8 +30,9 @@ const props = defineProps({
     grid-template-columns: repeat(12, 1fr);
   }
 
-  & > * {
+  .grid-top {
     grid-column: span 12;
+
     @include for-tablet() {
       &:first-child {
         grid-column: span 12;
@@ -44,6 +51,41 @@ const props = defineProps({
       &:nth-child(4) {
         grid-column: span 5;
       }
+    }
+  }
+
+  // middle-section
+
+  .grid-middle {
+    & > * {
+      grid-column: span 12;
+    }
+
+    @include for-tablet() {
+      &:nth-child(-n + 4) {
+        grid-column: span 4;
+      }
+
+      &:last-child {
+        grid-column: span 8;
+      }
+    }
+  }
+
+  // bottom-section
+
+  @include for-tablet() {
+    &:nth-child(n + 2):nth-child(-n + 5) {
+      grid-column: span 3;
+    }
+
+    &:nth-child(n + 5) {
+      grid-column: 1 / span 6;
+    }
+
+    &:last-child {
+      grid-column: 7 / span 6;
+      grid-row: 3 / 7;
     }
   }
 }

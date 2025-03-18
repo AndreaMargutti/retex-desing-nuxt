@@ -18,13 +18,17 @@ const middleArticles = () => {
 const bottomArticles = () => {
   return articles.toSpliced(0, 9);
 };
+
+// const allSections = [];
+// allSections.push(topArticles, middleArticles(), bottomArticles());
+// console.log(allSections);
 </script>
 
 <template>
-  <MainTopArticles :articles="topArticles" />
+  <MainArticlesSection :articles="topArticles" :layout="'top'" />
   <MainContributeBanner />
-  <MainMiddleArticles :articles="middleArticles()" />
+  <MainArticlesSection :articles="middleArticles()" :layout="'middle'" />
   <MainCitationBanner />
   <MainBlog />
-  <MainBottomArticles :articles="bottomArticles()" />
+  <MainArticlesSection :articles="bottomArticles()" :layout="'bottom'" />
 </template>
