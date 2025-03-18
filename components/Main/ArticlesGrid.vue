@@ -42,12 +42,12 @@ const props = defineProps({
       &:nth-child(2) {
         grid-column: span 7;
         grid-row: 2 / span 2;
+        min-height: 52rem;
       }
 
       &:nth-child(3) {
         grid-column: span 5;
         grid-row: 2 / 3;
-        min-height: 23.7rem;
       }
 
       &:nth-child(4) {
@@ -70,6 +70,7 @@ const props = defineProps({
 
       &:last-child {
         grid-column: span 8;
+        min-height: 30rem;
       }
     }
   }

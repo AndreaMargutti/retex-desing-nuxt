@@ -1,5 +1,5 @@
 <template>
-  <div class="padding-page banner align-center justify-between">
+  <div class="banner align-center justify-between">
     <div>
       <h3 class="banner__title">Il tuo supporto è fondamentale</h3>
     </div>
@@ -12,15 +12,14 @@
 
 <style scoped lang="scss">
 .banner {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
   background-color: #f4f1de;
 
   @include for-tablet {
     display: flex;
-    // padding-top: 5rem;
-    // padding-bottom: 5rem;
     padding-block: 5rem;
+    padding-inline: 2.5rem;
   }
 
   &__title {
