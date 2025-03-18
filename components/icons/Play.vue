@@ -27,7 +27,8 @@
 <style scoped lang="scss">
 .play-icon {
   background-color: #ffffff;
-  padding: 1.25px;
+  padding: 1.25rem;
+  margin: 0 auto;
   border: 1px solid black;
 }
 </style>

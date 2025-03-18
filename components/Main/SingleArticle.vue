@@ -19,12 +19,18 @@ console.log(props.singleArticle);
     class="article"
   >
     <div class="articles-info">
-      <NuxtImg
-        :src="singleArticle.imgUrl"
+      <div
         :class="[
           singleArticle.type === 'media-article' ? 'mobile-img' : 'd-none',
         ]"
-      />
+        class="article--image"
+      >
+        <NuxtImg :src="singleArticle.imgUrl" class="article--cover" />
+        <div class="article--icons">
+          <IconsImage />
+          <IconsPlay />
+        </div>
+      </div>
       <MainArticleTag :tag="singleArticle.tag" />
       <MainArticleTitle
         :id="props.index"
@@ -53,7 +59,6 @@ console.log(props.singleArticle);
     background-size: cover;
     display: flex;
 
-    min-height: 23.7rem;
     display: flex;
     align-items: end;
   }
@@ -88,14 +93,36 @@ console.log(props.singleArticle);
   padding: 2rem 1rem;
 }
 
+.article--image {
+  position: relative;
+}
+
+.article--icons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
 .mobile-img {
+  max-height: 202px;
   width: 100%;
   margin-bottom: 1.5rem;
   justify-self: center;
+  overflow: hidden;
 
   @include for-tablet() {
     display: none;
   }
+}
+
+.article--cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .editorial-article {

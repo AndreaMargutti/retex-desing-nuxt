@@ -10,15 +10,16 @@ const toggleBtns = () => {
 </script>
 
 <template>
-  <div
-    class="filter justify-between align-center padding-page topFilter--padding border filter--bottom-border"
-  >
-    <ul class="d-flex align-center">
-      <li v-for="{ id, title } in topics" :key="id" class="filter--item">
-        <h3 class="filter--title">{{ title }}</h3>
+  <div class="filter d-flex justify-between padding-page">
+    <ul class="d-flex align-center filter--list flex-wrap">
+      <li v-for="{ id, title, color } in topics" :key="id">
+        <p class="filter--title">{{ title }}</p>
       </li>
     </ul>
-    <IconsText />
+    <div class="d-flex align-center gap-12">
+      <IconsAccessibilty />
+      <IconsImage />
+    </div>
   </div>
   <div class="filter-buttons justify-between padding-filter background-gray">
     <div class="d-flex align-center gap-12 filter--title-big__padding-bottom">
@@ -43,22 +44,19 @@ const toggleBtns = () => {
 
   @include for-desktop() {
     display: flex;
+    padding-block: 1.6rem;
   }
 }
 
-.topFilter--padding {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.filter--bottom-border {
-  border-bottom-width: 1px;
+.filter--list {
+  gap: 2rem;
 }
 
 .filter--title {
   font-family: "Raleway";
-  font-size: 2.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  white-space: nowrap;
 
   &__big {
     font-weight: 700;
@@ -72,10 +70,6 @@ const toggleBtns = () => {
   @include for-desktop() {
     display: flex;
   }
-}
-
-.filter--item {
-  padding: 0.5rem;
 }
 
 .filter--title-big__padding-bottom {

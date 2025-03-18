@@ -47,6 +47,7 @@ const props = defineProps({
       &:nth-child(3) {
         grid-column: span 5;
         grid-row: 2 / 3;
+        min-height: 23.7rem;
       }
 
       &:nth-child(4) {
@@ -81,6 +82,11 @@ const props = defineProps({
     @include for-tablet() {
       &:first-child {
         grid-column: span 12;
+        min-height: 500px;
+
+        &:deep(.article-info) {
+          max-width: 40%;
+        }
       }
 
       &:nth-child(n + 2):nth-child(-n + 5) {
