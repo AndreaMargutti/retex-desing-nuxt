@@ -28,7 +28,7 @@ export default defineEventHandler(async () => {
           color: "#E2F1E8",
         },
         imgUrl:
-          "https://s3-alpha-sig.figma.com/img/4836/a9d1/6b12b5889d6ddad962a628409ed1fb35?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=g~XLybv8bDGxsn972Q7YXJl3KjyKqNlJdanAKDuGmjiTaYpq5qYND4V7wxFA~vzQci4tLn~fZ4BcBap1yEHJd7ygZ71BqJPxUbEz6Btg0RNfqg7L0e19oxLmruWjL3Unvj-PpZYn9j4Q~ra67Sxfd8679~qsbMO-2u1tCqxFfbRL2nYwhBZw~hbRwuJ6tquzOY8x6tDQxjiNvcxXzzUHSfmFy6NbIssWj-PHDeRa2hngWM5TZIg5Of6owSU0nDPU6fzrwZkngEjMczfmX8Kft-tTesZPw3YT4Zsm6wj1dg~g84JkdVT6Or-Z0S-GEqZ7JA2sFXvQhxBdYpVL2gTdXA__",
+          "https://s3-alpha-sig.figma.com/img/4836/a9d1/6b12b5889d6ddad962a628409ed1fb35?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bH6~zpy9~lLetV21oThy0Xmlaekg04qBPj08ttOq-1G7C9huL~dgxR5TDurlzc1PVw5jbIY0cEBEeNJ5PnxXDGIDQi8jZtF0Ff9G3ej51xlBRUxfNkVdV0UQPuvxs-c4sYzn6ibQrZ8BjjLCgJUo--bB66aNtBtTsVN7X0RsI3leKqXfSI8V2v-rWSKEYuvOS~D33oonHUgESI5ndoH6SbYQqE8-gCzzY4zy6EqN40QErbStsg1AD0XBGav1jHJBW9GJ9KhMM43MFzG-Oe1HQdi4jYTdHMFunoWZXNkhvGLCGfVFiF0A7~g~S6P6cr1weVxbVyuqpfFBORQyTosJVw__",
         author: {
           name: "Ugo Lombi",
           profile_pic:

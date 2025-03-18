@@ -37,6 +37,7 @@ console.log(props.singleArticle);
         :author="singleArticle.author"
         :date="singleArticle.date"
         :img="singleArticle.imgUrl"
+        :type="singleArticle.type"
       />
     </div>
   </div>
@@ -44,10 +45,13 @@ console.log(props.singleArticle);
 
 <style scoped lang="scss">
 .article {
+  border-bottom: 1px solid black;
   @include for-tablet() {
+    border: 0;
     background-image: v-bind(backgroundImage);
     background-position: center;
     background-size: cover;
+    display: flex;
 
     min-height: 23.7rem;
     display: flex;
@@ -86,8 +90,8 @@ console.log(props.singleArticle);
 
 .mobile-img {
   width: 100%;
-  display: block;
   margin-bottom: 1.5rem;
+  justify-self: center;
 
   @include for-tablet() {
     display: none;

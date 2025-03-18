@@ -3,6 +3,8 @@ const props = defineProps({
   author: { type: Object, required: true },
   date: { type: String, required: false },
   id: { type: Number, required: true },
+  img: { type: String, required: false },
+  type: { type: String, required: true },
 });
 </script>
 
@@ -11,7 +13,11 @@ const props = defineProps({
     <div class="profile-pic">
       <img :src="author.profile_pic" alt="profile_img" />
     </div>
-    <div :style="[id === 1 ? { color: 'white' } : '']" class="profile-info">
+    <div
+      :style="[img === '' ? { color: 'black' } : '']"
+      :class="[type === 'main-article' ? 'pofile-main-article' : '']"
+      class="profile-info"
+    >
       <h6 class="profile-info__name">
         {{ author.name }}
       </h6>
@@ -49,5 +55,9 @@ const props = defineProps({
     font-weight: 400;
     font-size: 0.6rem;
   }
+}
+
+.pofile-main-article {
+  color: white;
 }
 </style>

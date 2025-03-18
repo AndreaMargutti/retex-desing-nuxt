@@ -9,6 +9,7 @@ const props = defineProps({
 
 <template>
   <h2
+    :style="[img === '' ? { color: 'black' } : '']"
     :class="[
       type === 'main-article' ? 'main-title' : '',
       type === 'media-article' ? 'media-title' : '',

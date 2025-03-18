@@ -28,6 +28,7 @@ const props = defineProps({
 
   @include for-tablet() {
     grid-template-columns: repeat(12, 1fr);
+    gap: 1px;
   }
 
   .grid-top {
