@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="d-flex align-center gap-12" style="margin-top: 10px">
+  <div class="d-flex align-center gap-12">
     <div class="profile-pic">
       <img :src="author.profile_pic" alt="profile_img" />
     </div>

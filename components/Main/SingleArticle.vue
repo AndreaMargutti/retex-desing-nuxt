@@ -13,18 +13,31 @@ console.log(props.singleArticle);
 
 const articleSize: ArticleSize = computed(() => {
   if (props.singleArticle.type === "main-article") {
-    if (props.index === 0) {
-      return "lg";
-    } else if (props.index === 1) {
+    return "lg";
+  } else if (props.singleArticle.type === "media-article") {
+    if (props.index === 2) {
       return "md";
-    } else {
-      return "sm";
+    } else if (props.index === 9) {
+      return "lg";
+    } else if (props.index === 10) {
+      return "md";
     }
   }
-  return "md";
+
+  if (
+    props.index === 15 ||
+    props.index === 16 ||
+    props.index === 17 ||
+    props.index === 18
+  ) {
+    return "xs";
+  } else if (props.index === 19) {
+    return "md";
+  }
+  return "sm";
 });
 
-const articleWidth: AricleWidth = computed(() => {});
+// const articleWidth: AricleWidth = computed(() => {});
 </script>
 
 <template>
@@ -55,6 +68,7 @@ const articleWidth: AricleWidth = computed(() => {});
         :title="singleArticle.title"
         :type="singleArticle.type"
         :img="singleArticle.imgUrl"
+        :size="articleSize"
       />
       <MainArticleAuthor
         :id="props.index"

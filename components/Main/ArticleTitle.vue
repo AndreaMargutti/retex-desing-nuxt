@@ -4,6 +4,7 @@ const props = defineProps({
   id: { type: Number, required: true },
   type: { type: String, required: true },
   img: { type: String, required: false },
+  size: { type: String, required: true },
 });
 </script>
 
@@ -13,6 +14,10 @@ const props = defineProps({
     :class="[
       type === 'main-article' ? 'main-title' : '',
       type === 'media-article' ? 'media-title' : '',
+      size === 'lg' ? 'title__lg' : '',
+      size === 'md' ? 'title__md' : '',
+      size === 'sm' ? 'title__sm' : '',
+      size === 'xs' ? 'title__xs' : '',
     ]"
     class="title"
   >
@@ -26,6 +31,32 @@ const props = defineProps({
   font-size: 0.9rem;
   line-height: 1.6;
   color: black;
+
+  &__lg {
+    @include for-tablet() {
+      font-size: 2.5rem;
+    }
+    padding-block: 1.5rem;
+  }
+
+  &__md {
+    @include for-tablet() {
+      font-size: 2rem;
+    }
+    padding-block: 1.5rem;
+  }
+
+  &__sm {
+    @include for-tablet() {
+      font-size: 1.5rem;
+    }
+    padding-block: 1.5rem;
+  }
+
+  &__xs {
+    font-size: 1.1rem;
+    padding-block: 1rem;
+  }
 
   @include for-tablet() {
     font-size: 1.5rem;
