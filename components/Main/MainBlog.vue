@@ -39,6 +39,10 @@ console.log(newsletter);
 <style scoped lang="scss">
 .flex-item {
   flex-basis: 50%;
+
+  @include for-tablet() {
+    flex-basis: calc(100% / 6);
+  }
 }
 
 .blog__border {
@@ -78,11 +82,7 @@ console.log(newsletter);
   }
 }
 
-@media screen and (min-width: 900px) {
-  .flex-item {
-    flex-basis: calc(100% / 6);
-  }
-
+@media screen and (min-width: 796px) {
   .border-md {
     border-style: solid black;
     border-width: 0px 1px 0px 0px;
