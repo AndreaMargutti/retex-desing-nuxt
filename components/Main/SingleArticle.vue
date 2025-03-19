@@ -1,4 +1,7 @@
 <script setup lang="ts">
+type ArticleSize = "lg" | "md" | "sm" | "xs";
+type AricleWidth = "full" | "half" | "third";
+
 const props = defineProps({
   singleArticle: { type: Object, required: true },
   index: { type: Number, required: true },
@@ -7,6 +10,21 @@ const props = defineProps({
 const backgroundImage = `url(${props.singleArticle.imgUrl})`;
 const author = props.singleArticle.author.name;
 console.log(props.singleArticle);
+
+const articleSize: ArticleSize = computed(() => {
+  if (props.singleArticle.type === "main-article") {
+    if (props.index === 0) {
+      return "lg";
+    } else if (props.index === 1) {
+      return "md";
+    } else {
+      return "sm";
+    }
+  }
+  return "md";
+});
+
+const articleWidth: AricleWidth = computed(() => {});
 </script>
 
 <template>
