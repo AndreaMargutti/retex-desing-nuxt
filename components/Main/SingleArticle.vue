@@ -1,6 +1,7 @@
 <script setup lang="ts">
 type ArticleSize = "lg" | "md" | "sm" | "xs";
 type AricleWidth = "full" | "half" | "third";
+type ArticleAuthorDisplay = "flex" | "block";
 
 const props = defineProps({
   singleArticle: { type: Object, required: true },
@@ -37,7 +38,26 @@ const articleSize: ArticleSize = computed(() => {
   return "sm";
 });
 
-// const articleWidth: AricleWidth = computed(() => {});
+const articleWidth: AricleWidth = computed(() => {
+  if (props.singleArticle.type === "main-article") return "full";
+  if (props.singleArticle.type === "media-article") {
+    if (props.index === 9) {
+      return "half";
+    } else if (props.index === 10) {
+      return "third";
+    }
+  }
+  return "full";
+});
+
+const articleAuthorDisplay: ArticleAuthorDisplay = computed(() => {
+  if (props.singleArticle.type === "media-article") {
+    if (props.index === 10) {
+      return "block";
+    }
+  }
+  return "flex";
+});
 </script>
 
 <template>
@@ -49,7 +69,14 @@ const articleSize: ArticleSize = computed(() => {
     ]"
     class="article"
   >
-    <div class="articles-info">
+    <div
+      :class="[
+        articleWidth === 'full' ? 'articles-info__full' : '',
+        articleWidth === 'half' ? 'articles-info__half' : '',
+        articleWidth === 'third' ? 'articles-info__third' : '',
+      ]"
+      class="articles-info"
+    >
       <div
         :class="[
           singleArticle.type === 'media-article' ? 'mobile-img' : 'd-none',
@@ -76,6 +103,7 @@ const articleSize: ArticleSize = computed(() => {
         :date="singleArticle.date"
         :img="singleArticle.imgUrl"
         :type="singleArticle.type"
+        :display="articleAuthorDisplay"
       />
     </div>
   </div>
@@ -123,6 +151,18 @@ const articleSize: ArticleSize = computed(() => {
 
 .articles-info {
   padding: 2rem 1rem;
+
+  &__full {
+    max-width: 100%;
+  }
+
+  &__half {
+    max-width: 50%;
+  }
+
+  &__third {
+    width: 33%;
+  }
 }
 
 .article--image {

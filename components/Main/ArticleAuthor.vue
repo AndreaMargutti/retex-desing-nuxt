@@ -5,12 +5,19 @@ const props = defineProps({
   id: { type: Number, required: true },
   img: { type: String, required: false },
   type: { type: String, required: true },
+  display: { type: String, required: true },
 });
 </script>
 
 <template>
-  <div class="d-flex align-center gap-12">
-    <div class="profile-pic">
+  <div
+    :class="[display === 'block' ? 'd-block' : 'd-flex']"
+    class="align-center gap-12"
+  >
+    <div
+      :style="[display === 'block' ? { 'margin-bottom': '1rem' } : '']"
+      class="profile-pic"
+    >
       <img :src="author.profile_pic" alt="profile_img" />
     </div>
     <div
