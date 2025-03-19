@@ -63,10 +63,6 @@ const info = [
 </template>
 
 <style scoped lang="scss">
-/**
- * - creare un file `typography` dove specificare tutti gli stili globali
- */
-
 .menu-container {
   height: 100%;
   display: flex;
