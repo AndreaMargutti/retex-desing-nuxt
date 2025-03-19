@@ -142,7 +142,7 @@ export default defineEventHandler(async () => {
       {
         id: 9,
         type: "media-article",
-        title: "Esplorazioni spaziali: il futuro dell'umanità",
+        title: "Donne e nuove generazioni: con loro riparte l'Italia.",
         tag: {
           label: "Spazio",
           color: "#33FFA8",
