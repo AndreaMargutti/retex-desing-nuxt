@@ -40,10 +40,12 @@ const info = [
   { id: 5, label: `Mappa dell'attivismo` },
   { id: 6, label: "Inchieste crowdfunding" },
 ];
+
+const { status } = useHamburger();
 </script>
 
 <template>
-  <div class="menu-container">
+  <div :class="{ 'menu-mobile': !status }" class="menu-container">
     <div class="d-flex flex-wrap menu-article__container">
       <div
         v-for="{ id, title, description } in sections"
@@ -67,6 +69,12 @@ const info = [
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+//classe per attivare overflow-y in mobile breakpoint
+.menu-mobile {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .menu-article__container {
