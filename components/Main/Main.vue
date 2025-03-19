@@ -20,10 +20,6 @@ const middleArticles = () => {
 const bottomArticles = () => {
   return articles.toSpliced(0, 9);
 };
-
-// const allSections = [];
-// allSections.push(topArticles, middleArticles(), bottomArticles());
-// console.log(allSections);
 </script>
 
 <template>
