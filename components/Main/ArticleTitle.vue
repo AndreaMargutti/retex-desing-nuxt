@@ -1,27 +1,95 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   title: { type: String, required: true },
   id: { type: Number, required: true },
+  type: { type: String, required: true },
+  img: { type: String, required: false },
+  size: { type: String, required: true },
 });
 </script>
 
 <template>
-  <h1 :class="{ 'color-white': id === 1 }">{{ title }}</h1>
+  <h2
+    :style="[img === '' ? { color: 'black' } : '']"
+    :class="[
+      type === 'main-article' ? 'main-title' : '',
+      type === 'media-article' ? 'media-title' : '',
+      size === 'lg' ? 'title__lg' : '',
+      size === 'md' ? 'title__md' : '',
+      size === 'sm' ? 'title__sm' : '',
+      size === 'xs' ? 'title__xs' : '',
+    ]"
+    class="title"
+  >
+    {{ title }}
+  </h2>
 </template>
 
 <style scoped lang="scss">
-h1 {
+.title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: black;
+
+  &__lg {
+    @include for-tablet() {
+      font-size: 2.5rem;
+    }
+    padding-block: 1.5rem;
+  }
+
+  &__md {
+    @include for-tablet() {
+      font-size: 2rem;
+    }
+    padding-block: 1.5rem;
+  }
+
+  &__sm {
+    @include for-tablet() {
+      font-size: 1.5rem;
+    }
+    padding-block: 1.5rem;
+  }
+
+  &__xs {
+    font-size: 1.1rem;
+    padding-block: 1rem;
+  }
+
+  @include for-tablet() {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: white;
+  }
+}
+
+.main-title {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  @include for-tablet() {
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+}
+
+.media-title {
+  font-size: 1.3rem;
+  line-height: 1.5;
+
+  @include for-tablet() {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+
+.no-image {
+  color: black;
 }
 
 .color-white {
   color: white;
-}
-
-@media screen and (min-width: 769px) {
-  h1 {
-    font-size: 40px;
-  }
 }
 </style>

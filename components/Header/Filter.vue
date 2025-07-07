@@ -1,0 +1,100 @@
+<script setup lang="ts">
+const props = defineProps({
+  topics: { type: Array, required: true },
+});
+
+const showBtns = ref(false);
+const toggleBtns = () => {
+  showBtns.value = !showBtns.value;
+};
+</script>
+
+<template>
+  <div class="filter d-flex justify-between padding-page">
+    <ul class="d-flex align-center filter--list flex-wrap">
+      <li v-for="{ id, title, color } in topics" :key="id">
+        <p class="filter--title">{{ title }}</p>
+      </li>
+    </ul>
+    <div class="d-flex align-center gap-12">
+      <IconsAccessibilty />
+      <IconsImage />
+    </div>
+  </div>
+  <div class="filter-buttons justify-between padding-filter background-gray">
+    <div class="d-flex align-center gap-12 filter--title-big__padding-bottom">
+      <h3 class="filter--title__big">{{ topics[0].title }}</h3>
+      <IconsDropDown class="icon-display" @click="toggleBtns" />
+    </div>
+    <div v-show="!showBtns" class="filter-buttons align-center">
+      <HeaderFilterButtons
+        v-for="topic in topics"
+        v-show="topic.title != 'Tutti i temi'"
+        :key="topic.id"
+        :title="topic.title"
+        :color="topic.color"
+      />
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.filter {
+  display: none;
+
+  @include for-desktop() {
+    display: flex;
+    padding-block: 1.6rem;
+  }
+}
+
+.filter--list {
+  gap: 2rem;
+}
+
+.filter--title {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+
+  &__big {
+    font-weight: 700;
+    font-size: 3.2rem;
+  }
+}
+
+.filter-buttons {
+  display: block;
+
+  @include for-desktop() {
+    display: flex;
+  }
+}
+
+.filter--title-big__padding-bottom {
+  padding-bottom: 0.8rem;
+}
+
+.padding-filter {
+  padding: 2rem 1rem;
+
+  @include for-desktop() {
+    padding: 4rem 2.5rem;
+  }
+}
+
+.icon-display {
+  display: block;
+
+  @include for-desktop() {
+    display: none;
+  }
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+</style>

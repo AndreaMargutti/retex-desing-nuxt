@@ -1,17 +1,33 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   author: { type: Object, required: true },
   date: { type: String, required: false },
+  id: { type: Number, required: true },
+  img: { type: String, required: false },
+  type: { type: String, required: true },
+  display: { type: String, required: true },
 });
 </script>
 
 <template>
-  <div class="flex align-items-center gap-12" style="margin-top: 10px">
-    <div class="profile-pic">
-      <img :src="author.profile_pic" alt="" />
+  <div
+    :class="[display === 'block' ? 'd-block' : 'd-flex']"
+    class="align-center gap-12"
+  >
+    <div
+      :style="[display === 'block' ? { 'margin-bottom': '1rem' } : '']"
+      class="profile-pic"
+    >
+      <img :src="author.profile_pic" alt="profile_img" />
     </div>
-    <div class="profile-info">
-      <h6 class="profile-info__name">{{ author.name }}</h6>
+    <div
+      :style="[img === '' ? { color: 'black' } : '']"
+      :class="[type === 'main-article' ? 'pofile-main-article' : '']"
+      class="profile-info"
+    >
+      <h6 class="profile-info__name">
+        {{ author.name }}
+      </h6>
       <p class="profile-info__date">{{ date }}</p>
     </div>
   </div>
@@ -19,31 +35,36 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .profile-pic {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
+
+  @include for-tablet() {
+    width: 3rem;
+    height: 3rem;
+  }
+
   img {
-    border-radius: 20px;
+    border-radius: 50%;
   }
 }
 
 .profile-info {
-  color: black;
-
-  .profile-info__name {
-    font-weight: 400;
-    font-size: 14px;
+  @include for-tablet() {
+    color: white;
   }
 
-  .profile-info__date {
+  &__name {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 0.9rem;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 0.6rem;
   }
 }
 
-@media screen and (min-width: 769px) {
-  .profile-pic {
-    width: 48px;
-    height: 48px;
-  }
+.pofile-main-article {
+  color: white;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button class="image-icon">
     <svg
       width="24"
       height="24"
@@ -28,7 +28,7 @@
 </template>
 
 <style scoped lang="scss">
-button {
+.image-icon {
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 4px;
